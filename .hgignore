@@ -3,5 +3,5 @@ syntax: glob
 book/_build
 **/__pycache__
 
-**/tmp.*
+**/tmp/*
 convert/**/*.md

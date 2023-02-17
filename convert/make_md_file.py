@@ -1,7 +1,10 @@
+#!/usr/bin/env python3
 """
-Call as
+To be called as:
 
-python make_md_file.py tour-basic
+```
+./make_md_file.py rst_files/tour-basic.rst
+```
 """
 
 import os
@@ -41,22 +44,23 @@ def has_to_be_made(path_out, sources, source_dir=None):
     )
 
 
-path_dir = Path(sys.argv[-1])
-
-path_rst = next(path_dir.glob("*.rst")).absolute()
+path_rst = Path(sys.argv[-1]).absolute()
 
 paths_test = sorted(Path("test_files").glob("test-*.t"))
 paths_test = {path.name[5:-2]: path for path in paths_test}
 
-path_tmp_symlink = path_rst.with_name("tmp.rst")
+here = Path(__file__).parent
+path_tmp = here.absolute() / "tmp"
+path_tmp.mkdir(exist_ok=True)
+
+path_tmp_symlink = path_tmp / (path_rst.stem + "_tmp.rst")
 if not path_tmp_symlink.exists():
     path_tmp_symlink.symlink_to(path_rst)
-
 
 path_tmp_md = path_tmp_symlink.with_suffix(".md")
 
 if has_to_be_made(path_tmp_md, path_tmp_symlink):
-    subprocess.run(["rst2myst", "convert", path_tmp_symlink])
+    subprocess.run(["rst2myst", "convert", path_tmp_symlink, "--no-colon-fences"])
 
 assert path_tmp_md.exists()
 
@@ -80,10 +84,13 @@ for part in parts[1:]:
 used_test_files = sorted(used_test_files)
 print(f"{used_test_files = }")
 
-test_file_cells = {name: parse_test_file(paths_test[name]) for name in used_test_files}
+test_file_cells = {
+    name: parse_test_file(paths_test[name]) for name in used_test_files
+}
 
 test_file_cells_dict = {
-    name: {cell.name: cell for cell in cells} for name, cells in test_file_cells.items()
+    name: {cell.name: cell for cell in cells}
+    for name, cells in test_file_cells.items()
 }
 
 parts = [
@@ -99,21 +106,29 @@ kernelspec:
   language: bash
   name: bash
 ---
-
 """
 ]
 
-while texts and examples:
 
+def cleanup(text):
+    return (
+        text.strip()
+        .replace("```{Tip}", "```{tip}")
+        .replace("```{Note}", "```{note}")
+    )
+
+
+while texts and examples:
     if texts:
-        parts.append(texts.pop(0))
+        parts.append(cleanup(texts.pop(0)))
     if examples:
         name_test_file, name_example = examples.pop(0)
         cell = test_file_cells_dict[name_test_file][name_example]
         input_code = cell.get_input_code()
-        parts.append("```{code-cell}\n" + input_code + "\n```")
+        parts.append("\n```{code-cell}\n" + input_code + "\n```\n")
 
 
-path_md_file = path_rst.with_suffix(".md")
-
+path_md_file = path_tmp / (path_rst.stem + ".md")
 path_md_file.write_text("\n".join(parts))
+
+print(f"New file written: {path_md_file.relative_to(here)}")

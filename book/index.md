@@ -1,1 +1,1 @@
-Welcome to Mercurial: the definitive guide's documentation!
+# Welcome to Mercurial: the definitive guide's documentation!
