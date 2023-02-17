@@ -220,13 +220,13 @@ The default output of the ``hg diff`` command is backwards compatible with the r
 
 Consider the case where we use ``hg rename`` to rename a file.
 
-.. include:: examples/results/ch04-diff.rename.basic.lxo
+.. include:: examples/results/ch04-diff.rename-basic.lxo
 
 
 The output of ``hg diff`` above obscures the fact that we simply renamed a file. The ``hg diff`` command accepts an option, ``--git`` or ``-g``, to
 use a newer diff format that displays such information in a more readable form.
 
-.. include:: examples/results/ch04-diff.rename.git.lxo
+.. include:: examples/results/ch04-diff.rename-git.lxo
 
 
 This option also helps with a case that can otherwise be confusing: a file that appears to be modified according to ``hg status``, but for which
@@ -237,7 +237,7 @@ This option also helps with a case that can otherwise be confusing: a file that 
 
 The normal ``diff`` command pays no attention to file permissions, which is why ``hg diff`` prints nothing by default. If we supply it with the ``-g`` option, it tells us what really happened.
 
-.. include:: examples/results/ch04-diff.chmod.git.lxo
+.. include:: examples/results/ch04-diff.chmod-git.lxo
 
 
 Which files to manage, and which to avoid
@@ -354,24 +354,24 @@ This is an overview of the kinds of patterns you can use when you're matching on
 
 The “``*``” character matches any string, within a single directory.
 
-.. include:: examples/results/filenames.glob.star.lxo
+.. include:: examples/results/filenames.glob-star.lxo
 
 
 The “``**``” pattern matches any string, and crosses directory boundaries. It's not a standard Unix glob token, but it's accepted by several popular
 Unix shells, and is very useful.
 
-.. include:: examples/results/filenames.glob.starstar.lxo
+.. include:: examples/results/filenames.glob-starstar.lxo
 
 
 The “``?``” pattern matches any single character.
 
-.. include:: examples/results/filenames.glob.question.lxo
+.. include:: examples/results/filenames.glob-question.lxo
 
 
 The “``[``” character begins a *character class*. This matches any single character within the class. The class ends with a “``]``” character. A class
 may contain multiple *range*\ s of the form “``a-f``”, which is shorthand for “``abcdef``”.
 
-.. include:: examples/results/filenames.glob.range.lxo
+.. include:: examples/results/filenames.glob-range.lxo
 
 
 If the first character after the “``[``” in a character class is a “``!``”, it *negates* the class, making it match any single character not in the
@@ -380,7 +380,7 @@ class.
 A “``{``” begins a group of subpatterns, where the whole group matches if any subpattern in the group matches. The “``,``” character separates
 subpatterns, and “``}``” ends the group.
 
-.. include:: examples/results/filenames.glob.group.lxo
+.. include:: examples/results/filenames.glob-group.lxo
 
 
 Watch out!
@@ -389,7 +389,7 @@ Watch out!
 Don't forget that if you want to match a pattern in any directory, you should not be using the “``*``” match-any token, as this will only match within
 one directory. Instead, use the “``**``” token. This small example illustrates the difference between the two.
 
-.. include:: examples/results/filenames.glob.star-starstar.lxo
+.. include:: examples/results/filenames.glob-star-starstar.lxo
 
 
 Regular expression matching with ``re`` patterns
@@ -423,12 +423,12 @@ using glob syntax by default (but you can use regexps if you need to).
 
 You can read a ``-I`` filter as “process only the files that match this filter”.
 
-.. include:: examples/results/filenames.filter.include.lxo
+.. include:: examples/results/filenames.filter-include.lxo
 
 
 The ``-X`` filter is best read as “process only the files that don't match this pattern”.
 
-.. include:: examples/results/filenames.filter.exclude.lxo
+.. include:: examples/results/filenames.filter-exclude.lxo
 
 
 Permanently ignoring unwanted files and directories

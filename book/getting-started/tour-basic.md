@@ -93,7 +93,7 @@ C:\\> echo %UserProfile%
 You can use any text you like as the value of the `username` config item, since this information is for reading by other people, but will not be
 interpreted by Mercurial. The convention that most people follow is to use their name and email address, as in the example above.
 
-```{Note}
+```{note}
 Mercurial's built-in web server obfuscates email addresses, to make it more difficult for the email harvesting tools that spammers use. This
 reduces the likelihood that you'll start receiving more junk email if you publish a Mercurial repository on the web.
 ```
@@ -459,7 +459,7 @@ significant into it.
 Most commands that print output of some kind will print more output when passed a `-v` (or `--verbose`) option, and less when passed `-q` (or
 `--quiet`).
 
-```{Note}
+```{note}
 Almost always, Mercurial commands use consistent option names to refer to the same concepts. For instance, if a command deals with changesets,
 you'll always identify them with `--rev` or `-r`. This consistent use of option names makes it easier to remember what options a particular
 command takes.
@@ -512,7 +512,7 @@ of `hg log --patch`.
 
 If we run the `hg commit` command without any arguments, it records all of the changes we've made, as reported by `hg status` and `hg diff`.
 
-```{Note}
+```{note}
 Like other Mercurial commands, if we don't supply explicit names to commit to the `hg commit`, it will operate across a repository's entire working directory. Be wary of this if you're coming from the Subversion or CVS
 world, since you might expect it to operate only on the current directory that you happen to be visiting and its subdirectories.
 ```

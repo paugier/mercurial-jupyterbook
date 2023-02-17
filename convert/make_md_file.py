@@ -74,9 +74,10 @@ used_test_files = set()
 
 for part in parts[1:]:
     info_example, text = part.split("```\n", 1)
-    name_test_file, name_example = info_example.split(".")[:2]
+    info_example = info_example.split(".lxo")[0]
+    name_test_file, name_example = info_example.rsplit(".", 1)
     if name_test_file not in paths_test:
-        raise NotImplementedError(f"{name_test_file = }")
+        raise NotImplementedError(f"{name_test_file = }, {info_example = }")
     texts.append(text)
     examples.append((name_test_file, name_example))
     used_test_files.add(name_test_file)

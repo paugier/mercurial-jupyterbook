@@ -59,12 +59,12 @@
   ? watcher/watcher.py
   ? xyzzy.txt
 
-#$ name: glob.star
+#$ name: glob-star
 
   $ hg add 'glob:*.py'
   adding main.py
 
-#$ name: glob.starstar
+#$ name: glob-starstar
 
   $ cd ..
   $ hg status 'glob:**.py'
@@ -74,7 +74,7 @@
   ? setup.py
   ? src/watcher/watcher.py
 
-#$ name: glob.star-starstar
+#$ name: glob-star-starstar
 
   $ hg status 'glob:*.py'
   ? setup.py
@@ -85,29 +85,29 @@
   ? setup.py
   ? src/watcher/watcher.py
 
-#$ name: glob.question
+#$ name: glob-question
 
   $ hg status 'glob:**.?'
   ? src/watcher/_watcher.c
 
-#$ name: glob.range
+#$ name: glob-range
 
   $ hg status 'glob:**[nr-t]'
   ? MANIFEST.in
   ? src/xyzzy.txt
 
-#$ name: glob.group
+#$ name: glob-group
 
   $ hg status 'glob:*.{in,py}'
   ? MANIFEST.in
   ? setup.py
 
-#$ name: filter.include
+#$ name: filter-include
 
   $ hg status -I '*.in'
   ? MANIFEST.in
 
-#$ name: filter.exclude
+#$ name: filter-exclude
 
   $ hg status -X '**.py' src
   ? src/watcher/_watcher.c

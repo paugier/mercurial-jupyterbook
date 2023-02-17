@@ -10,3 +10,8 @@ parts:
     - file: getting-started/preface
     - file: getting-started/intro
     - file: getting-started/tour-basic
+  - caption: Daily use of Mercurial
+    chapters:
+    - file: daily-use/files
+    # - file: daily-use/undo
+    # - file: daily-use/hgext

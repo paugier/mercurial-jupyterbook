@@ -4,7 +4,7 @@
   $ hg ci -Ama
   adding a
 
-#$ name: rename.basic
+#$ name: rename-basic
 
   $ hg rename a b
   $ hg diff
@@ -19,7 +19,7 @@
   @@ -0,0 +1,1 @@
   +a
 
-#$ name: rename.git
+#$ name: rename-git
 
   $ hg diff -g
   diff --git a/a b/b
@@ -40,7 +40,7 @@
   M a
   $ hg diff
 
-#$ name: chmod.git
+#$ name: chmod-git
 
   $ hg diff -g
   diff --git a/a b/a
