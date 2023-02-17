@@ -1,0 +1,12 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: index
+
+parts:
+  - caption: Getting started
+    chapters:
+    - file: getting-started/preface
+    - file: getting-started/intro
+    - file: getting-started/tour-basic

@@ -1,0 +1,6 @@
+[ui]
+username = Pierre Augier <pa@example.com>
+tweakdefaults = True
+
+[color]
+log.changeset = red bold

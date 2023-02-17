@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "mercurial-jupyterbook"
+version = "0.1.0"
+description = "New version of the Mercurial book using Jupyter Book"
+authors = ["pierre.augier <pierre.augier@univ-grenoble-alpes.fr>"]
+license = "CC BY-SA"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jupyter-book = "^0.13.2"
+bash_kernel = "^0.9.0"
+black = {extras = ["jupyter"], version = "^23.1.0"}
+rst-to-myst = "^0.3.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
