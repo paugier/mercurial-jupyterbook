@@ -38,6 +38,7 @@ or pull changes from another repository, Mercurial remembers what you did. You c
 Here's a mistake that I often find myself making: committing a change in which I've created and referenced a new file, but forgotten to `hg add` it.
 
 ```{code-cell}
+export HGRCPATH=$PWD/../hgrc4book
 cd /tmp/tmp_mercurial_book
 rm -rf *
 hg init a

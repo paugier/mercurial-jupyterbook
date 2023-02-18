@@ -14,4 +14,4 @@ parts:
     chapters:
     - file: daily-use/files
     - file: daily-use/undo
-    # - file: daily-use/hgext
+    - file: daily-use/hgext

@@ -6,4 +6,5 @@ tweakdefaults = True
 log.changeset = red bold
 
 [extensions]
+extdiff =
 hggit =

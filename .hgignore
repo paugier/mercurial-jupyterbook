@@ -5,3 +5,5 @@ book/_build
 
 **/tmp/*
 convert/**/*.md
+
+.vscode

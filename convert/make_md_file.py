@@ -53,7 +53,7 @@ here = Path(__file__).parent
 path_tmp = here.absolute() / "tmp"
 path_tmp.mkdir(exist_ok=True)
 
-path_tmp_symlink = path_tmp / (path_rst.stem + "_tmp.rst")
+path_tmp_symlink = path_tmp / f"tmp_{path_rst.stem}.rst"
 if not path_tmp_symlink.exists():
     path_tmp_symlink.symlink_to(path_rst)
 
