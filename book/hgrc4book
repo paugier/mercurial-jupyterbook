@@ -4,3 +4,6 @@ tweakdefaults = True
 
 [color]
 log.changeset = red bold
+
+[extensions]
+hggit =

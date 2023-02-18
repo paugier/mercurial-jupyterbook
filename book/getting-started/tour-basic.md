@@ -297,7 +297,7 @@ use a built-in command that Mercurial provides. This command is called `hg clone
 ```{code-cell}
 cd /tmp/tmp_mercurial_book
 rm -rf hello* my-hello
-hg clone $HOME/Dev/mercurial-book-repos/hg-tutorial-hello hello
+hg clone https://github.com/paugier/hg-tutorial-hello.git hello
 ```
 
 One advantage of using `hg clone` is that, as we can see above, it lets us clone repositories over the network. Another is that it remembers where we cloned from, which
