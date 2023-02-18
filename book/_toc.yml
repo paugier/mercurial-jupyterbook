@@ -13,5 +13,5 @@ parts:
   - caption: Daily use of Mercurial
     chapters:
     - file: daily-use/files
-    # - file: daily-use/undo
+    - file: daily-use/undo
     # - file: daily-use/hgext

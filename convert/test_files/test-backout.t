@@ -25,20 +25,20 @@ three-way command-line merge, and kdiff3 may not be available.
   $ cat myfile
   first change
 
-#$ name: simple.log
+#$ name: simple-log
 
   $ hg log --style compact
   2[tip]   cc2b3f63bf21   1970-01-01 00:00 +0000   test
     back out second change
-  
+
   1   3f53b6599e2a   1970-01-01 00:00 +0000   test
     second change
-  
+
   0   20a1b5caea6a   1970-01-01 00:00 +0000   test
     first change
-  
 
-#$ name: non-tip.clone
+
+#$ name: non-tip-clone
 
   $ cd ..
   $ hg clone -r1 myrepo non-tip-repo
@@ -50,7 +50,7 @@ three-way command-line merge, and kdiff3 may not be available.
   1 files updated, 0 files merged, 0 files removed, 0 files unresolved
   $ cd non-tip-repo
 
-#$ name: non-tip.backout
+#$ name: non-tip-backout
 
   $ echo third change >> myfile
   $ hg commit -m 'third change'
@@ -63,12 +63,12 @@ three-way command-line merge, and kdiff3 may not be available.
   0 files updated, 1 files merged, 0 files removed, 0 files unresolved
   (branch merge, don't forget to commit)
 
-#$ name: non-tip.cat
+#$ name: non-tip-cat
   $ cat myfile
   first change
   third change
 
-#$ name: manual.clone
+#$ name: manual-clone
 
   $ cd ..
   $ hg clone -r1 myrepo newrepo
@@ -80,7 +80,7 @@ three-way command-line merge, and kdiff3 may not be available.
   1 files updated, 0 files merged, 0 files removed, 0 files unresolved
   $ cd newrepo
 
-#$ name: manual.backout
+#$ name: manual-backout
 
   $ echo third change >> myfile
   $ hg commit -m 'third change'
@@ -89,23 +89,23 @@ three-way command-line merge, and kdiff3 may not be available.
   0 files updated, 1 files merged, 0 files removed, 0 files unresolved
   changeset 3:376c7740c33a backs out changeset 1:3f53b6599e2a
 
-#$ name: manual.log
+#$ name: manual-log
 
   $ hg log --style compact
   3[tip]   376c7740c33a   1970-01-01 00:00 +0000   test
     back out second change
-  
+
   2   c6e437253ad6   1970-01-01 00:00 +0000   test
     third change
-  
+
   1   3f53b6599e2a   1970-01-01 00:00 +0000   test
     second change
-  
+
   0   20a1b5caea6a   1970-01-01 00:00 +0000   test
     first change
-  
 
-#$ name: manual.parents
+
+#$ name: manual-parents
 
   $ hg parents
   changeset:   3:376c7740c33a
@@ -113,9 +113,9 @@ three-way command-line merge, and kdiff3 may not be available.
   user:        test
   date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     back out second change
-  
 
-#$ name: manual.heads
+
+#$ name: manual-heads
 
   $ hg heads
   changeset:   3:376c7740c33a
@@ -123,18 +123,18 @@ three-way command-line merge, and kdiff3 may not be available.
   user:        test
   date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     back out second change
-  
+
 
 #$ name:
 
   $ echo 'first change' > myfile
 
-#$ name: manual.cat
+#$ name: manual-cat
 
   $ cat myfile
   first change
 
-#$ name: manual.merge
+#$ name: manual-merge
 
   $ hg merge
   abort: nothing to merge

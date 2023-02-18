@@ -1,0 +1,18 @@
+digraph bad_merge_2 {
+	ancestor [label="1: ancestor",color=grey,fontcolor=grey];
+	left [label="2: my change",color=grey,fontcolor=grey];
+	right [label="3: your change",color=grey,fontcolor=grey];
+	bad [label="4: bad merge",color=grey,fontcolor=grey];
+	new [label="5: new change",color=grey,fontcolor=grey];
+
+	bak_left [label="6: backout 1 of\nbad merge",shape=box];
+
+	ancestor -> left [color=grey];
+	ancestor -> right [color=grey];
+	left -> bad [color=grey];
+	right -> bad [color=grey];
+	bad -> new [color=grey];
+
+	bad -> bak_left;
+	left -> bak_left [style=dotted,label="--parent=2"];
+}

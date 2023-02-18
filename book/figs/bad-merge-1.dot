@@ -1,0 +1,13 @@
+digraph bad_merge_1 {
+	ancestor [label="1: ancestor"];
+	left [label="2: my change"];
+	right [label="3: your change"];
+	bad [label="4: bad merge"];
+	new [label="5: new change"];
+
+	ancestor -> left;
+	ancestor -> right;
+	left -> bad;
+	right -> bad;
+	bad -> new;
+}

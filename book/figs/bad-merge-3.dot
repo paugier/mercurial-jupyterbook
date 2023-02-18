@@ -1,0 +1,22 @@
+digraph bad_merge_3 {
+	ancestor [label="1: ancestor",color="#bbbbbb",fontcolor="#bbbbbb"];
+	left [label="2: my change",color="#bbbbbb",fontcolor="#bbbbbb"];
+	right [label="3: your change",color="#bbbbbb",fontcolor="#bbbbbb"];
+	bad [label="4: bad merge",color="#bbbbbb",fontcolor="#bbbbbb"];
+	new [label="5: new change",color="#bbbbbb",fontcolor="#bbbbbb"];
+
+	bak_left [label="6: backout 1 of\nbad merge",color=grey,shape=box];
+	bak_right [label="8: backout 2 of\nbad merge",shape=box];
+
+	ancestor -> left [color="#bbbbbb"];
+	ancestor -> right [color="#bbbbbb"];
+	left -> bad [color="#bbbbbb"];
+	right -> bad [color="#bbbbbb"];
+	bad -> new [color="#bbbbbb"];
+
+	bad -> bak_left [color=grey];
+	left -> bak_left [style=dotted,label="--parent=2",color=grey,fontcolor=grey];
+
+	bad -> bak_right;
+	right -> bak_right [style=dotted,label="--parent=3"];
+}

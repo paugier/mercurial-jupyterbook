@@ -208,7 +208,7 @@ We're going to start by backing out the last changeset we committed.
 
 You can see that the second line from ``myfile`` is no longer present. Taking a look at the output of ``hg log`` gives us an idea of what the ``hg backout`` command has done.
 
-.. include:: examples/results/backout.simple.log.lxo
+.. include:: examples/results/backout.simple-log.lxo
 
 
 
@@ -228,18 +228,18 @@ Backing out a non-tip change
 
 If you want to back out a change other than the last one you committed, pass the ``--merge`` option to the ``hg backout`` command.
 
-.. include:: examples/results/backout.non-tip.clone.lxo
+.. include:: examples/results/backout.non-tip-clone.lxo
 
 
 This makes backing out any changeset a “one-shot” operation that's usually simple and fast.
 
-.. include:: examples/results/backout.non-tip.backout.lxo
+.. include:: examples/results/backout.non-tip-backout.lxo
 
 
 If you take a look at the contents of ``myfile`` after the backout finishes, you'll see that the first and third changes are present, but not the
 second.
 
-.. include:: examples/results/backout.non-tip.cat.lxo
+.. include:: examples/results/backout.non-tip-cat.lxo
 
 
 As the graphical history in :ref:`fig:undo:backout-non-tip <fig:undo:backout-non-tip>` illustrates, Mercurial still commits one change in this kind of situation (the box-shaped
@@ -275,18 +275,18 @@ backout changeset. Taking control of the backout process by hand is something yo
 ``hg backout`` command is doing for you automatically. To illustrate this, let's clone our first repository, but omit the backout change that it
 contains.
 
-.. include:: examples/results/backout.manual.clone.lxo
+.. include:: examples/results/backout.manual-clone.lxo
 
 
 As with our earlier example, We'll commit a third changeset, then back out its parent, and see what happens.
 
-.. include:: examples/results/backout.manual.backout.lxo
+.. include:: examples/results/backout.manual-backout.lxo
 
 
 Our new changeset is again a descendant of the changeset we backed out; it's thus a new head, *not* a descendant of the changeset that was the tip.
 The ``hg backout`` command was quite explicit in telling us this.
 
-.. include:: examples/results/backout.manual.log.lxo
+.. include:: examples/results/backout.manual-log.lxo
 
 
 Again, it's easier to see what has happened by looking at a graph of the revision history, in :ref:`fig:undo:backout-manual <fig:undo:backout-manual>`. This makes it clear
@@ -302,24 +302,24 @@ box-shaped).
 
 After the ``hg backout`` command has completed, it leaves the new “backout” changeset as the parent of the working directory.
 
-.. include:: examples/results/backout.manual.parents.lxo
+.. include:: examples/results/backout.manual-parents.lxo
 
 
 Now we have two isolated sets of changes.
 
-.. include:: examples/results/backout.manual.heads.lxo
+.. include:: examples/results/backout.manual-heads.lxo
 
 
 Let's think about what we expect to see as the contents of ``myfile`` now. The first change should be present, because we've never backed it out. The
 second change should be missing, as that's the change we backed out. Since the history graph shows the third change as a separate head, we *don't*
 expect to see the third change present in ``myfile``.
 
-.. include:: examples/results/backout.manual.cat.lxo
+.. include:: examples/results/backout.manual-cat.lxo
 
 
 To get the third change back into the file, we just do a normal merge of our two heads.
 
-.. include:: examples/results/backout.manual.merge.lxo
+.. include:: examples/results/backout.manual-merge.lxo
 
 
 Afterwards, the graphical history of our repository looks like :ref:`fig:undo:backout-manual-merge <fig:undo:backout-manual-merge>`.
@@ -579,7 +579,7 @@ The process ends when ``hg bisect`` identifies a unique changeset that marks the
 
 To start the search, we must run the ``hg bisect --reset`` command.
 
-.. include:: examples/results/bisect.search.init.lxo
+.. include:: examples/results/bisect.search-init.lxo
 
 
 In our case, the binary test we use is simple: we check to see if any file in the repository contains the string “i have a gub”. If it does, this
@@ -589,14 +589,14 @@ doesn't is “good”.
 Most of the time, the revision to which the working directory is synced (usually the tip) already exhibits the problem introduced by the buggy change,
 so we'll mark it as “bad”.
 
-.. include:: examples/results/bisect.search.bad-init.lxo
+.. include:: examples/results/bisect.search-bad-init.lxo
 
 
 Our next task is to nominate a changeset that we know *doesn't* have the bug; the ``hg bisect`` command will “bracket” its search between the first
 pair of good and bad changesets. In our case, we know that revision 10 didn't have the bug. (I'll have more words about choosing the first “good”
 changeset later.)
 
-.. include:: examples/results/bisect.search.good-init.lxo
+.. include:: examples/results/bisect.search-good-init.lxo
 
 
 Notice that this command printed some output.
@@ -612,17 +612,17 @@ revision is bad; if not, this revision is good... include:: examples/results/bis
 
 This test looks like a perfect candidate for automation, so let's turn it into a shell function.
 
-.. include:: examples/results/bisect.search.mytest.lxo
+.. include:: examples/results/bisect.search-mytest.lxo
 
 
 We can now run an entire test step with a single command, ``mytest``.
 
-.. include:: examples/results/bisect.search.step2.lxo
+.. include:: examples/results/bisect.search-step2.lxo
 
 
 A few more invocations of our canned test step command, and we're done.
 
-.. include:: examples/results/bisect.search.rest.lxo
+.. include:: examples/results/bisect.search-rest.lxo
 
 
 Even though we had 40 changesets to search through, the ``hg bisect`` command let us find the changeset that introduced our “bug” with only five
@@ -636,7 +636,7 @@ When you're finished using the ``hg bisect`` command in a repository, you can us
 command doesn't use much space, so it doesn't matter if you forget to run this command. However, ``hg bisect`` won't let you start a new search in
 that repository until you do a ``hg bisect --reset``.
 
-.. include:: examples/results/bisect.search.reset.lxo
+.. include:: examples/results/bisect.search-reset.lxo
 
 
 Tips for finding bugs effectively
