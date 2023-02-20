@@ -274,8 +274,9 @@ you can see, the history is nice and linear.
 
 (fig-undo-backout)=
 
-```{figure} ../figs/undo-simple.png
 Backing out a change using the hg backout command
+
+```{graphviz} ../figs/undo-simple.dot
 ```
 
 ### Backing out a non-tip change
@@ -312,8 +313,9 @@ contains two heads, and the working directory is in a merge state.
 
 (fig-undo-backout-non-tip)=
 
-```{figure} ../figs/undo-non-tip.png
 Automated backout of a non-tip change using the hg backout command
+
+```{graphviz} ../figs/undo-non-tip.dot
 ```
 
 The result is that you end up “back where you were”, only with some extra history that undoes the effect of the changeset you wanted to back out.
@@ -362,8 +364,9 @@ box-shaped).
 
 (fig-undo-backout-manual)=
 
-```{figure} ../figs/undo-manual.png
 Backing out a change using the hg backout command
+
+```{graphviz} ../figs/undo-manual.dot
 ```
 
 After the `hg backout` command has completed, it leaves the new “backout” changeset as the parent of the working directory.
@@ -398,8 +401,9 @@ Afterwards, the graphical history of our repository looks like {ref}`fig:undo:ba
 
 (fig-undo-backout-manual-merge)=
 
-```{figure} ../figs/undo-manual-merge.png
 Manually merging a backout change
+
+```{graphviz} ../figs/undo-manual-merge.dot
 ```
 
 ### Why `hg backout` works as it does
@@ -467,7 +471,7 @@ cannot be easily fixed up by hand ought to be very rare, but the `hg backout` co
 
 > (fig-undo-bad-merge-1)=
 >
-> ```{figure} ../figs/bad-merge-1.png
+> ```{graphviz} ../figs/bad-merge-1.dot
 > ```
 >
 > A bad merge
@@ -481,7 +485,7 @@ One way to do so would be as follows.
 
    (fig-undo-bad-merge-2)=
 
-   ```{figure} ../figs/bad-merge-2.png
+   ```{graphviz} ../figs/bad-merge-2.dot
    ```
 
    Backing out the merge, favoring one parent
@@ -491,7 +495,7 @@ One way to do so would be as follows.
 
    (fig-undo-bad-merge-3)=
 
-   ```{figure} ../figs/bad-merge-3.png
+   ```{graphviz} ../figs/bad-merge-3.dot
    ```
 
    Backing out the merge, favoring the other parent
@@ -501,7 +505,7 @@ One way to do so would be as follows.
 
    (fig-undo-bad-merge-4)=
 
-   ```{figure} ../figs/bad-merge-4.png
+   ```{graphviz} ../figs/bad-merge-4.dot
    ```
 
    Merging the backouts
@@ -510,7 +514,7 @@ One way to do so would be as follows.
 
    (fig-undo-bad-merge-5)=
 
-   ```{figure} ../figs/bad-merge-5.png
+   ```{graphviz} ../figs/bad-merge-5.dot
    ```
 
    Merging the backouts

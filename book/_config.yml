@@ -35,3 +35,5 @@ html:
 sphinx:
   config:
     nb_merge_streams: True
+  extra_extensions:
+    - sphinx.ext.graphviz
