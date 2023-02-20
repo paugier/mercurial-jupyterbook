@@ -24,7 +24,7 @@ parts:
     chapters:
     - file: advanced-concepts/template
     - file: advanced-concepts/hook
-    # - file: advanced-concepts/changing-history
+    - file: advanced-concepts/changing-history
     # - file: advanced-concepts/scaling
     # - file: advanced-concepts/concepts
   - caption: Appendix
