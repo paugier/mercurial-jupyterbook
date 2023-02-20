@@ -85,13 +85,10 @@ for part in parts[1:]:
 used_test_files = sorted(used_test_files)
 print(f"{used_test_files = }")
 
-test_file_cells = {
-    name: parse_test_file(paths_test[name]) for name in used_test_files
-}
+test_file_cells = {name: parse_test_file(paths_test[name]) for name in used_test_files}
 
 test_file_cells_dict = {
-    name: {cell.name: cell for cell in cells}
-    for name, cells in test_file_cells.items()
+    name: {cell.name: cell for cell in cells} for name, cells in test_file_cells.items()
 }
 
 parts = [
@@ -113,9 +110,7 @@ kernelspec:
 
 def cleanup(text):
     return (
-        text.strip()
-        .replace("```{Tip}", "```{tip}")
-        .replace("```{Note}", "```{note}")
+        text.strip().replace("```{Tip}", "```{tip}").replace("```{Note}", "```{note}")
     )
 
 

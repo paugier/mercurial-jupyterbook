@@ -10,20 +10,18 @@ Moreover, building the book is no longer possible because it depends on
 repositories that were hosted on Bitbucket.
 
 - https://bitbucket.org/bos/hg-tutorial-hello (now available in
-https://bitbucket-archive.softwareheritage.org/projects/bo/bos/hg-tutorial-hello.html)
+  https://bitbucket-archive.softwareheritage.org/projects/bo/bos/hg-tutorial-hello.html)
 
 - https://bitbucket.org/facebook/remotefilelog (now available in
-https://bitbucket-archive.softwareheritage.org/projects/fa/facebook/remotefilelog.html
-and also
-https://foss.heptapod.net/mercurial/mercurial-devel/-/tree/branch/default/hgext/remotefilelog)
+  https://bitbucket-archive.softwareheritage.org/projects/fa/facebook/remotefilelog.html
+  and also
+  https://foss.heptapod.net/mercurial/mercurial-devel/-/tree/branch/default/hgext/remotefilelog)
 
 - https://bitbucket.org/facebook/hg-experimental (now available in
-https://bitbucket-archive.softwareheritage.org/projects/fa/facebook/hg-experimental.html)
+  https://bitbucket-archive.softwareheritage.org/projects/fa/facebook/hg-experimental.html)
 
-[Mercurial Book]: https://book.mercurial-scm.org/
-
-This repository contains the source of a newer version of the Mercurial Book
-using a more modern build system based on Jupyter Book.
+This repository contains the source of a newer version of the Mercurial Book using
+a more modern build system based on Jupyter Book.
 
 ## Setup the environment and build the html version of the book
 
@@ -32,3 +30,5 @@ pip install poetry
 poetry shell
 make
 ```
+
+[mercurial book]: https://book.mercurial-scm.org/

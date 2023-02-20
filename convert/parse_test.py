@@ -16,7 +16,6 @@ class Cell:
 
 
 def parse_test_file(path_test):
-
     full_code = path_test.read_text()
 
     cells_raw = full_code.split("#$ ")
@@ -24,7 +23,6 @@ def parse_test_file(path_test):
     cells = []
 
     for cell_raw in cells_raw:
-
         if not cell_raw:
             continue
 
@@ -69,6 +67,5 @@ def parse_test_file(path_test):
 
 
 if __name__ == "__main__":
-
     cells = parse_test_file(Path(sys.argv[-1]))
     pprint(cells)
