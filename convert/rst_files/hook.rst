@@ -306,8 +306,8 @@ with an error status if a change adds a line with trailing whitespace to any fil
 the offending file or line. It also has the nice property of not paying attention to unmodified lines; only lines that introduce new trailing
 whitespace cause problems.
 
-.. include:: examples/results/ch09-check_whitespace.py.lst.lxo
-
+.. literalinclude:: examples/results/ch09-check_whitespace.py
+   :language: python
 
 The above version is much more complex, but also more useful. It parses a unified diff to see if any lines add trailing whitespace, and prints the
 name of the file and the line number of each such occurrence. Even better, if the change adds trailing whitespace, this hook saves the commit comment
@@ -530,7 +530,7 @@ template, as the base string to use when constructing a URL that will let users 
 
 Here is an example set of ``bugzilla`` hook config information.
 
-.. include:: examples/results/ch10-bugzilla-config.lst.lxo
+.. literalinclude:: examples/results/ch10-bugzilla-config.lst
 
 
 Testing and troubleshooting
@@ -625,13 +625,11 @@ If you set the baseurl item in the ``web`` section, you can use it in a template
 
 Here is an example set of ``notify`` configuration information.
 
-.. include:: examples/results/ch10-notify-config.lst.lxo
-
+.. literalinclude:: examples/results/ch10-notify-config.lst
 
 This will produce a message that looks like the following:
 
-.. include:: examples/results/ch10-notify-config-mail.lst.lxo
-
+.. literalinclude:: examples/results/ch10-notify-config-mail.lst
 
 Testing and troubleshooting
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,0 +1,19 @@
+[notify]
+# really send email
+test = false
+# subscriber data lives in the notify repo
+config = /home/hg/repos/notify/notify.conf
+# repos live in /home/hg/repos on server, so strip 4 "/" chars
+strip = 4
+template = X-Hg-Repo: {webroot}\n
+  Subject: {webroot}: {desc|firstline|strip}\n
+  From: {author}
+  \n\n
+  changeset {node|short} in {root}
+  \n\ndetails:
+  {baseurl}{webroot}?cmd=changeset;node={node|short}
+  description: {desc|tabindent|strip}
+
+[web]
+baseurl =
+http://hg.example.com/

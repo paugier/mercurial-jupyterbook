@@ -139,7 +139,7 @@ Mercurial's built-in `hg diff` command outputs plaintext unified diffs.
 
 ```{code-cell}
 export HGRCPATH=$PWD/../hgrc4book
-mkdir /tmp/tmp_mercurial_book
+mkdir -p /tmp/tmp_mercurial_book
 cd /tmp/tmp_mercurial_book
 rm -rf /tmp/tmp_mercurial_book/*
 ```

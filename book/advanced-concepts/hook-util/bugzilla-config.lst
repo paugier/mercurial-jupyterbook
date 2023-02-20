@@ -1,0 +1,14 @@
+[bugzilla]
+host = bugzilla.example.com
+password = mypassword version = 2.16
+# server-side repos live in /home/hg/repos, so strip 4 leading
+# separators
+strip = 4
+hgweb = http://hg.example.com/
+usermap = /home/hg/repos/notify/bugzilla.conf
+template = Changeset {node|short}, made by {author} in the {webroot}
+  repo, refers to this bug.\n
+  For complete details, see
+  {hgweb}{webroot}?cmd=changeset;node={node|short}\n
+  Changeset description:\n
+  \t{desc|tabindent}
