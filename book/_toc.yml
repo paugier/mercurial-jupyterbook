@@ -18,7 +18,7 @@ parts:
   - caption: Working together
     chapters:
     - file: working-together/collab
-    # - file: working-together/branch
+    - file: working-together/branch
     # - file: working-together/merge
   - caption: Advanced concepts
     chapters:
@@ -30,4 +30,7 @@ parts:
     # - file: advanced-concepts/concepts
   - caption: Appendix
     chapters:
+    # - file: appendix/license
+    # - file: appendix/srcinstall
+    # - file: appendix/app-svn
     - file: appendix/app-git

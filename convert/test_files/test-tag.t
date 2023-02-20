@@ -25,15 +25,15 @@
   user:        test
   date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     Added tag v1.0 for changeset 13cee6a4cfb5
-  
+
   changeset:   0:13cee6a4cfb5
   tag:         v1.0
   user:        test
   date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     Initial commit
-  
 
-#$ name: log.v1.0
+
+#$ name: log-v1-0
 
   $ echo goodbye > myfile2
   $ hg commit -A -m 'Second commit'
@@ -44,7 +44,7 @@
   user:        test
   date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     Initial commit
-  
+
 
 #$ name: remove
 
@@ -74,4 +74,3 @@
   user:        test
   date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     Added tag v1.1 for changeset 91d09096580b
-  

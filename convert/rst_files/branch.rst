@@ -57,7 +57,7 @@ When you run ``hg log``, if it displays a revision that has tags associated with
 Any time you need to provide a revision ID to a Mercurial command, the command will accept a tag name in its place. Internally, Mercurial will
 translate your tag name into the corresponding revision ID, then use that.
 
-.. include:: examples/results/tag.log.v1.0.lxo
+.. include:: examples/results/tag.log-v1-0.lxo
 
 
 There's no limit on the number of tags you can have in a repository, or on the number of tags that a single revision can have. As a practical matter,
