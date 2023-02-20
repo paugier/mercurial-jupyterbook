@@ -27,6 +27,7 @@ a more modern build system based on Jupyter Book.
 
 ```bash
 pip install poetry
+poetry install
 poetry shell
 make
 ```
