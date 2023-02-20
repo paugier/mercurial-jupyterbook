@@ -21,18 +21,18 @@ Merging is a fundamental part of working with a distributed revision control too
 Because we need to merge often, Mercurial makes the process easy. Let's walk through a merge. We'll begin by cloning yet another repository (see how
 often they spring up?) and making a change in it.
 
-.. include:: examples/results/tour.merge.clone.lxo
+.. include:: examples/results/tour.merge-clone.lxo
 
 
 We should now have two copies of ``hello.c`` with different contents. The histories of the two repositories have also diverged, as illustrated in
 :ref:`fig:tour-merge:sep-repos <fig:tour-merge:sep-repos>`. Here is a copy of our file from one repository.
 
-.. include:: examples/results/tour.merge.cat1.lxo
+.. include:: examples/results/tour.merge-cat1.lxo
 
 
 And here is our slightly different version from the other repository.
 
-.. include:: examples/results/tour.merge.cat2.lxo
+.. include:: examples/results/tour.merge-cat2.lxo
 
 
 
@@ -43,7 +43,7 @@ And here is our slightly different version from the other repository.
 
 We already know that pulling changes from our ``my-hello`` repository will have no effect on the working directory.
 
-.. include:: examples/results/tour.merge.pull.lxo
+.. include:: examples/results/tour.merge-pull.lxo
 
 
 However, the ``hg pull`` command says something about “heads”.
@@ -67,7 +67,7 @@ In :ref:`fig:tour-merge:pull <fig:tour-merge:pull>`, you can see the effect of t
 remains the same in the new repository, but the *revision number* has changed. (This, incidentally, is a fine example of why it's not safe to use
 revision numbers when discussing changesets.) We can view the heads in a repository using the ``hg heads`` command.
 
-.. include:: examples/results/tour.merge.heads.lxo
+.. include:: examples/results/tour.merge-heads.lxo
 
 
 Performing the merge
@@ -75,7 +75,7 @@ Performing the merge
 
 What happens if we try to use the normal ``hg update`` command to update to the new tip?
 
-.. include:: examples/results/tour.merge.update.lxo
+.. include:: examples/results/tour.merge-update.lxo
 
 
 Mercurial is telling us that the ``hg update`` command keeps us on the same head (no files have been changed).
@@ -84,13 +84,13 @@ It informs us of the other head, but it won't do the merge itself, unless we for
 
 To start a merge between the two heads, we use the ``hg merge`` command.
 
-.. include:: examples/results/tour.merge.merge.lxo
+.. include:: examples/results/tour.merge-merge.lxo
 
 
 We resolve the contents of ``hello.c`` This updates the working directory so that it contains changes from *both* heads, which is reflected in both
 the output of ``hg parents`` and the contents of ``hello.c``.
 
-.. include:: examples/results/tour.merge.parents.lxo
+.. include:: examples/results/tour.merge-parents.lxo
 
 
 Committing the results of the merge
@@ -98,13 +98,13 @@ Committing the results of the merge
 
 Once we've started a merge, ``hg parents`` will display two parents until we ``hg commit`` the results of the merge.
 
-.. include:: examples/results/tour.merge.commit.lxo
+.. include:: examples/results/tour.merge-commit.lxo
 
 
 We now have a new tip revision; notice that it has *both* of our former heads as its parents. These are the same revisions that were previously
 displayed by ``hg parents``.
 
-.. include:: examples/results/tour.merge.tip.lxo
+.. include:: examples/results/tour.merge-tip.lxo
 
 
 In :ref:`fig:tour-merge:merge <fig:tour-merge:merge>`, you can see a representation of what happens to the working directory during the merge, and how this affects the
@@ -371,12 +371,12 @@ The case of diverging names occurs when two developers start with a file—let's
 
 Anne renames the file to ``bar``.
 
-.. include:: examples/results/rename.divergent.rename.anne.lxo
+.. include:: examples/results/rename.divergent.rename-anne.lxo
 
 
 Meanwhile, Bob renames it to ``quux``. (Remember that ``hg mv`` is an alias for ``hg rename``.)
 
-.. include:: examples/results/rename.divergent.rename.bob.lxo
+.. include:: examples/results/rename.divergent.rename-bob.lxo
 
 
 I like to think of this as a conflict because each developer has expressed different intentions about what the file ought to be named.

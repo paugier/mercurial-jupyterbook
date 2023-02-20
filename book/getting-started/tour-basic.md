@@ -238,7 +238,6 @@ hg status
 It's somewhat helpful to know that we've modified `hello.c`, but we might prefer to know exactly *what* changes we've made to it. To do this, we use
 the `hg diff` command.
 
-
 ```{code-cell}
 hg diff
 ```

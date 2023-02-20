@@ -3,7 +3,7 @@
   $ hg version
   Mercurial Distributed SCM (version *) (glob)
   (see https://mercurial-scm.org for more information)
-  
+
   Copyright (C) 2005-20* Matt Mackall and others (glob)
   This is free software; see the source for copying conditions. There is NO
   warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
@@ -12,41 +12,41 @@
 
   $ hg help init
   hg init [-e CMD] [--remotecmd CMD] [DEST]
-  
+
   create a new repository in the given directory
-  
+
       Initialize a new repository in the given directory. If the given directory
       does not exist, it will be created.
-  
+
       If no directory is given, the current directory is used.
-  
+
       It is possible to specify an "ssh://" URL as the destination. See 'hg help
       urls' for more information.
-  
+
       Returns 0 on success.
-  
+
   options:
-  
+
    -e --ssh CMD       specify ssh command to use
       --remotecmd CMD specify hg command to run on the remote side
       --insecure      do not verify server certificate (ignoring web.cacerts
                       config)
-  
+
   (some details hidden, use --verbose to show complete help)
 
 #$ name: help-keyword
 
   $ hg help -k init
   Topics:
-  
+
    config      Configuration Files
    glossary    Glossary
    merge-tools Merge Tools
    revisions   Specifying Revisions
    templating  Template Usage
-  
+
   Commands:
-  
+
    init  create a new repository in the given directory
    paths show aliases for remote repositories
 
@@ -94,27 +94,27 @@
   user:        Bryan O'Sullivan <bos@serpentine.com>
   date:        Sat Aug 16 22:16:53 2008 +0200
   summary:     Trim comments.
-  
+
   changeset:   3:0272e0d5a517
   user:        Bryan O'Sullivan <bos@serpentine.com>
   date:        Sat Aug 16 22:08:02 2008 +0200
   summary:     Get make to generate the final binary from a .o file.
-  
+
   changeset:   2:fef857204a0c
   user:        Bryan O'Sullivan <bos@serpentine.com>
   date:        Sat Aug 16 22:05:04 2008 +0200
   summary:     Introduce a typo into hello.c.
-  
+
   changeset:   1:82e55d328c8c
   user:        mpm@selenic.com
   date:        Fri Aug 26 01:21:28 2005 -0700
   summary:     Create a makefile
-  
+
   changeset:   0:0a04b987be5a
   user:        mpm@selenic.com
   date:        Fri Aug 26 01:20:50 2005 -0700
   summary:     Create a standard "hello, world" program
-  
+
 
 #$ name: log-r
 
@@ -123,25 +123,25 @@
   user:        Bryan O'Sullivan <bos@serpentine.com>
   date:        Sat Aug 16 22:08:02 2008 +0200
   summary:     Get make to generate the final binary from a .o file.
-  
+
   $ hg log -r 0272e0d5a517
   changeset:   3:0272e0d5a517
   user:        Bryan O'Sullivan <bos@serpentine.com>
   date:        Sat Aug 16 22:08:02 2008 +0200
   summary:     Get make to generate the final binary from a .o file.
-  
+
   $ hg log -r 1 -r 4
   changeset:   1:82e55d328c8c
   user:        mpm@selenic.com
   date:        Fri Aug 26 01:21:28 2005 -0700
   summary:     Create a makefile
-  
+
   changeset:   4:2278160e78d4
   tag:         tip
   user:        Bryan O'Sullivan <bos@serpentine.com>
   date:        Sat Aug 16 22:16:53 2008 +0200
   summary:     Trim comments.
-  
+
 
 #$ name: log.range
 
@@ -150,18 +150,18 @@
   user:        Bryan O'Sullivan <bos@serpentine.com>
   date:        Sat Aug 16 22:05:04 2008 +0200
   summary:     Introduce a typo into hello.c.
-  
+
   changeset:   3:0272e0d5a517
   user:        Bryan O'Sullivan <bos@serpentine.com>
   date:        Sat Aug 16 22:08:02 2008 +0200
   summary:     Get make to generate the final binary from a .o file.
-  
+
   changeset:   4:2278160e78d4
   tag:         tip
   user:        Bryan O'Sullivan <bos@serpentine.com>
   date:        Sat Aug 16 22:16:53 2008 +0200
   summary:     Trim comments.
-  
+
 
 #$ name: log-v
 
@@ -172,8 +172,8 @@
   files:       Makefile
   description:
   Get make to generate the final binary from a .o file.
-  
-  
+
+
 
 #$ name: log-vp
 
@@ -184,20 +184,20 @@
   files:       hello.c
   description:
   Introduce a typo into hello.c.
-  
-  
+
+
   diff -r 82e55d328c8c -r fef857204a0c hello.c
   --- a/hello.c	Fri Aug 26 01:21:28 2005 -0700
   +++ b/hello.c	Sat Aug 16 22:05:04 2008 +0200
   @@ -11,6 +11,6 @@
-   
+
    int main(int argc, char **argv)
    {
   -	printf("hello, world!\n");
   +	printf("hello, world!\");
    	return 0;
    }
-  
+
 
 #$ name: reclone
 
@@ -213,9 +213,9 @@
    * Placed in the public domain by Bryan O'Sullivan.  This program is
    * not covered by patents in the United States or other countries.
    */
-  
+
   #include <stdio.h>
-  
+
   int main(int argc, char **argv)
   {
   	printf("hello, world!\");
@@ -233,9 +233,9 @@
    * Placed in the public domain by Bryan O'Sullivan.  This program is
    * not covered by patents in the United States or other countries.
    */
-  
+
   #include <stdio.h>
-  
+
   int main(int argc, char **argv)
   {
   	printf("hello, world!\");
@@ -286,8 +286,8 @@
   files:       hello.c
   description:
   Added an extra line of output
-  
-  
+
+
   diff -r 2278160e78d4 -r 3358452fd7d5 hello.c
   --- a/hello.c	Sat Aug 16 22:16:53 2008 +0200
   +++ b/hello.c	Thu Jan 01 00:00:00 1970 +0000
@@ -298,7 +298,7 @@
   +	printf("hello again!\n");
    	return 0;
    }
-  
+
 #$ name: tip
 
   $ hg tip -vp
@@ -309,8 +309,8 @@
   files:       hello.c
   description:
   Added an extra line of output
-  
-  
+
+
   diff -r 2278160e78d4 -r 3358452fd7d5 hello.c
   --- a/hello.c	Sat Aug 16 22:16:53 2008 +0200
   +++ b/hello.c	Thu Jan 01 00:00:00 1970 +0000
@@ -321,7 +321,7 @@
   +	printf("hello again!\n");
    	return 0;
    }
-  
+
 
 #$ name: clone-pull
 
@@ -341,7 +341,7 @@
   user:        test
   date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     Added an extra line of output
-  
+
 
 #$ name: pull
 
@@ -351,17 +351,17 @@
   user:        Bryan O'Sullivan <bos@serpentine.com>
   date:        Sat Aug 16 22:16:53 2008 +0200
   summary:     Trim comments.
-  
+
   changeset:   3:0272e0d5a517
   user:        Bryan O'Sullivan <bos@serpentine.com>
   date:        Sat Aug 16 22:08:02 2008 +0200
   summary:     Get make to generate the final binary from a .o file.
-  
+
   changeset:   2:fef857204a0c
   user:        Bryan O'Sullivan <bos@serpentine.com>
   date:        Sat Aug 16 22:05:04 2008 +0200
   summary:     Introduce a typo into hello.c.
-  
+
   $ hg pull ../my-hello
   pulling from ../my-hello
   searching for changes
@@ -376,17 +376,17 @@
   user:        test
   date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     Added an extra line of output
-  
+
   changeset:   4:2278160e78d4
   user:        Bryan O'Sullivan <bos@serpentine.com>
   date:        Sat Aug 16 22:16:53 2008 +0200
   summary:     Trim comments.
-  
+
   changeset:   3:0272e0d5a517
   user:        Bryan O'Sullivan <bos@serpentine.com>
   date:        Sat Aug 16 22:08:02 2008 +0200
   summary:     Get make to generate the final binary from a .o file.
-  
+
 
 #$ name: update
 
@@ -406,7 +406,7 @@
   user:        test
   date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     Added an extra line of output
-  
+
 
 #$ name: older
 
@@ -417,7 +417,7 @@
   user:        Bryan O'Sullivan <bos@serpentine.com>
   date:        Sat Aug 16 22:05:04 2008 +0200
   summary:     Introduce a typo into hello.c.
-  
+
   $ hg update
   2 files updated, 0 files merged, 0 files removed, 0 files unresolved
   $ hg parents
@@ -426,7 +426,7 @@
   user:        test
   date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     Added an extra line of output
-  
+
 
 #$ name: clone-push
 
@@ -446,7 +446,7 @@
   user:        test
   date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     Added an extra line of output
-  
+
 
 #$ name: push
 
@@ -476,7 +476,7 @@
   user:        test
   date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     Added an extra line of output
-  
+
 
 #$ name: push.net
 
@@ -502,7 +502,7 @@
   > EOF
   $ chmod +x my-text-editor
 
-#$ name: merge.clone
+#$ name: merge-clone
 
   $ hg clone hello my-new-hello
   updating to branch default
@@ -516,16 +516,16 @@
 
   $ hg log -r 5 | grep changeset | cut -c 16-19 2>/dev/null > /tmp/REV5.my-new-hello
 
-#$ name: merge.cat1
+#$ name: merge-cat1
 
   $ cat hello.c
   /*
    * Placed in the public domain by Bryan O'Sullivan.  This program is
    * not covered by patents in the United States or other countries.
    */
-  
+
   #include <stdio.h>
-  
+
   int main(int argc, char **argv)
   {
   	printf("once more, hello.\n");
@@ -534,16 +534,16 @@
   	return 0;
   }
 
-#$ name: merge.cat2
+#$ name: merge-cat2
 
   $ cat ../my-hello/hello.c
   /*
    * Placed in the public domain by Bryan O'Sullivan.  This program is
    * not covered by patents in the United States or other countries.
    */
-  
+
   #include <stdio.h>
-  
+
   int main(int argc, char **argv)
   {
   	printf("hello, world!\");
@@ -551,7 +551,7 @@
   	return 0;
   }
 
-#$ name: merge.pull
+#$ name: merge-pull
 
   $ hg pull ../my-hello
   pulling from ../my-hello
@@ -566,7 +566,7 @@
 
   $ hg log -r 6 | grep changeset | cut -c 16-19 2>/dev/null > /tmp/REV6.my-new-hello
 
-#$ name: merge.heads
+#$ name: merge-heads
 
   $ hg heads
   changeset:   6:3358452fd7d5
@@ -575,49 +575,49 @@
   user:        test
   date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     Added an extra line of output
-  
+
   changeset:   5:3e917d898551
   user:        test
   date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     A new hello for a new day.
-  
 
-#$ name: merge.update
+
+#$ name: merge-update
 
   $ hg update
   0 files updated, 0 files merged, 0 files removed, 0 files unresolved
   1 other heads for branch "default"
 
-#$ name: merge.merge
+#$ name: merge-merge
 
   $ hg merge
   merging hello.c
   0 files updated, 1 files merged, 0 files removed, 0 files unresolved
   (branch merge, don't forget to commit)
 
-#$ name: merge.parents
+#$ name: merge-parents
 
   $ hg parents
   changeset:   5:3e917d898551
   user:        test
   date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     A new hello for a new day.
-  
+
   changeset:   6:3358452fd7d5
   tag:         tip
   parent:      4:2278160e78d4
   user:        test
   date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     Added an extra line of output
-  
+
   $ cat hello.c
   /*
    * Placed in the public domain by Bryan O'Sullivan.  This program is
    * not covered by patents in the United States or other countries.
    */
-  
+
   #include <stdio.h>
-  
+
   int main(int argc, char **argv)
   {
   	printf("once more, hello.\n");
@@ -626,7 +626,7 @@
   	return 0;
   }
 
-#$ name: merge.commit
+#$ name: merge-commit
 
   $ hg commit -m 'Merged changes'
 
@@ -634,7 +634,7 @@
 
   $ hg log -r 7 | grep changeset | cut -c 16-19 2>/dev/null > /tmp/REV7.my-new-hello
 
-#$ name: merge.tip
+#$ name: merge-tip
 
   $ hg tip
   changeset:   7:e83c60091e12
@@ -644,4 +644,3 @@
   user:        test
   date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     Merged changes
-  

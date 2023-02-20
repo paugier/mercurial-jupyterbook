@@ -19,7 +19,7 @@ parts:
     chapters:
     - file: working-together/collab
     - file: working-together/branch
-    # - file: working-together/merge
+    - file: working-together/merge
   - caption: Advanced concepts
     chapters:
     - file: advanced-concepts/empty

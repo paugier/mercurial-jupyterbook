@@ -8,3 +8,4 @@ convert/**/*.md
 
 .vscode
 book/conf.py
+**/.ipynb_checkpoints

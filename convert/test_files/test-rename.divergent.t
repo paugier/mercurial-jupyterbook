@@ -14,13 +14,13 @@
   updating to branch default
   1 files updated, 0 files merged, 0 files removed, 0 files unresolved
 
-#$ name: rename.anne
+#$ name: rename-anne
 
   $ cd anne
   $ hg rename foo bar
   $ hg ci -m 'Rename foo to bar'
 
-#$ name: rename.bob
+#$ name: rename-bob
 
   $ cd ../bob
   $ hg mv foo quux
