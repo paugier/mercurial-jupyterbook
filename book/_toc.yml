@@ -30,7 +30,7 @@ parts:
     # - file: advanced-concepts/concepts
   - caption: Appendix
     chapters:
-    # - file: appendix/license
+    - file: appendix/app-license
     # - file: appendix/srcinstall
     # - file: appendix/app-svn
     - file: appendix/app-git

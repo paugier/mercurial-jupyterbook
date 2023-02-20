@@ -16,7 +16,7 @@ O'Reilly in 2009. An HTML version of the book is
 ### Second edition
 
 Work on the second edition of the book was started in 2015 by Mathias De Maré. The
-current version can be [read online](<>).
+current version can be [read online](https://book.mercurial-scm.org/).
 
 We, the Hgbook team, want to bring the book up-to-date and explain new concepts
 and features that have been added to Mercurial in the past few years. Some of the

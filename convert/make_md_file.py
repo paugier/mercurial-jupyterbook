@@ -114,7 +114,7 @@ def cleanup(text):
     )
 
 
-while texts and examples:
+while texts or examples:
     if texts:
         parts.append(cleanup(texts.pop(0)))
     if examples:
