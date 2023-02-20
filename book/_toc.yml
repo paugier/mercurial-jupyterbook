@@ -22,8 +22,7 @@ parts:
     - file: working-together/merge
   - caption: Advanced concepts
     chapters:
-    - file: advanced-concepts/empty
-    # - file: advanced-concepts/template
+    - file: advanced-concepts/template
     # - file: advanced-concepts/hook
     # - file: advanced-concepts/changing-history
     # - file: advanced-concepts/scaling

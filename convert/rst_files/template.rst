@@ -325,12 +325,12 @@ Identifying mistakes in templates
 If Mercurial encounters a problem in a template you are working on, it prints a terse error message that, once you figure out what it means, is
 actually quite useful.
 
-.. include:: examples/results/template.svnstyle.syntax.input.lxo
+.. include:: examples/results/template.svnstyle.syntax-input.lxo
 
 Notice that the broken template alias attempts to define a ``cs`` keyword, but uses an incorrect number of arguments for this keyword.
 Mercurial promptly complains:
 
-.. include:: examples/results/template.svnstyle.syntax.error.lxo
+.. include:: examples/results/template.svnstyle.syntax-error.lxo
 
 The description of the problem is not always clear (though it is in this case), but even when it is cryptic, it is almost always trivial to visually inspect
 the offending part of the template and see what is wrong.

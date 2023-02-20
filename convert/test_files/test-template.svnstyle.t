@@ -8,12 +8,12 @@
   $ ./svn log -r9653
   ------------------------------------------------------------------------
   r9653 | sean.hefty | 2006-09-27 14:39:55 -0700 (Wed, 27 Sep 2006) | 5 lines
-  
+
   On reporting a route error, also include the status for the error,
   rather than indicating a status of 0 when an error has occurred.
-  
+
   Signed-off-by: Sean Hefty <sean.hefty@intel.com>
-  
+
   ------------------------------------------------------------------------
 
 #$ name:
@@ -57,12 +57,12 @@
   $ echo '[templatealias]' > $HGRCPATH
   $ echo 'cs = "startswith(bar, baz, bos, bzz)"' > $HGRCPATH
 
-#$ name: syntax.input
+#$ name: syntax-input
 
   $ cat $HGRCPATH
   cs = "startswith(bar, baz, bos, bzz)"
 
-#$ name: syntax.error
+#$ name: syntax-error
 
   $ hg log -r1 --template "{startswith(foo, bar, wup, huy)}"
   hg: parse error: startswith expects two arguments
@@ -106,14 +106,14 @@
   $ cat svn.templatealias >> $HGRCPATH
   $ hg log -r1 -Tsvn
   ------------------------------------------------------------------------
-  
+
   r1 | test | 1970-01-01 00:00 +0000 (Thu, 01 Jan 1970)
-  
+
   added line to end of <<hello>> file.
-  
+
   in addition, added a file with the helpful name (at least i hope that some
   might consider it so) of goodbye.
-  
+
   ------------------------------------------------------------------------
 
 
@@ -122,26 +122,25 @@
   $ cat svn.multiline >> $HGRCPATH
   $ hg log -r1 -Tsvnmulti
   ------------------------------------------------------------------------
-  
+
   r1 | test | 1970-01-01 00:00 +0000 (Thu, 01 Jan 1970)
-  
+
   added line to end of <<hello>> file.
-  
+
   in addition, added a file with the helpful name (at least i hope that some
   might consider it so) of goodbye.
-  
+
   ------------------------------------------------------------------------
 
 #$ name: result-multiline-separate
   $ hg log -r1 -T./multiline
   ------------------------------------------------------------------------
-  
+
   r1 | test | 1970-01-01 00:00 +0000 (Thu, 01 Jan 1970)
-  
+
   added line to end of <<hello>> file.
-  
+
   in addition, added a file with the helpful name (at least i hope that some
   might consider it so) of goodbye.
-  
-  ------------------------------------------------------------------------
 
+  ------------------------------------------------------------------------
