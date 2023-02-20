@@ -15,3 +15,12 @@ parts:
     - file: daily-use/files
     - file: daily-use/undo
     - file: daily-use/hgext
+  - caption: Working together
+    chapters:
+    - file: working-together/empty
+  - caption: Advanced concepts
+    chapters:
+    - file: advanced-concepts/empty
+  - caption: Appendix
+    chapters:
+    - file: appendix/app-git

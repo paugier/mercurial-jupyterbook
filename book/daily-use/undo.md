@@ -293,7 +293,7 @@ This makes backing out any changeset a “one-shot” operation that's usually s
 ```{code-cell}
 echo third change >> myfile
 hg commit -m 'third change'
-# pa: requires user interaction. why?
+# todo: requires user interaction. why?
 # hg backout --merge -m 'back out second change' 1
 ```
 
@@ -345,7 +345,7 @@ As with our earlier example, We'll commit a third changeset, then back out its p
 ```{code-cell}
 echo third change >> myfile
 hg commit -m 'third change'
-# pa: requires user interaction. why?
+# todo: requires user interaction. why?
 # hg backout 1 -m "back out second change"
 ```
 
