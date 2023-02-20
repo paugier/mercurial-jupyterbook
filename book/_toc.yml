@@ -26,7 +26,7 @@ parts:
     - file: advanced-concepts/hook
     - file: advanced-concepts/changing-history
     - file: advanced-concepts/scaling
-    # - file: advanced-concepts/concepts
+    - file: advanced-concepts/concepts
   - caption: Appendix
     chapters:
     - file: appendix/app-license

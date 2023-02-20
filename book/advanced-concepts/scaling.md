@@ -448,9 +448,8 @@ Currently defined uppercase keys are:
 
 > - *BUNDLESPEC*: a specification of the bundle, describing its properties.
 >   Relevant properties are the compression type and the format type that we
->   discussed in {ref}`sec-scaling-generatebundles`.
->   Combining these yields a specification formatted like *\<bundle>-\<format>*,
->   for example *gzip-v2*.
+>   discussed in {ref}`sec-scaling-generatebundles`. Combining these yields a
+>   specification formatted like *\<bundle>-\<format>*, for example *gzip-v2*.
 > - *REQUIRESNI*: specifies if Server Name Indicating (SNI) is required. SNI is
 >   meant for TLS-enabled servers that have different hostnames on the same IP.
 >   Often, these hostnames are covered by different certificates, which can be
