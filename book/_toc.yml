@@ -17,10 +17,17 @@ parts:
     - file: daily-use/hgext
   - caption: Working together
     chapters:
-    - file: working-together/empty
+    - file: working-together/collab
+    # - file: working-together/branch
+    # - file: working-together/merge
   - caption: Advanced concepts
     chapters:
     - file: advanced-concepts/empty
+    # - file: advanced-concepts/template
+    # - file: advanced-concepts/hook
+    # - file: advanced-concepts/changing-history
+    # - file: advanced-concepts/scaling
+    # - file: advanced-concepts/concepts
   - caption: Appendix
     chapters:
     - file: appendix/app-git

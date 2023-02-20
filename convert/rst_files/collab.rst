@@ -619,8 +619,19 @@ your access permissions are *too permissive*. Apache's ``suexec`` subsystem won'
 Your web server may be configured to disallow execution of CGI programs in your per-user web directory. Here's Apache's default per-user configuration
 from my Fedora system.
 
-.. include:: examples/results/ch06-apache-config.lst.lxo
+::
 
+   <Directory /home/*/public_html>
+   AllowOverride FileInfo AuthConfig Limit
+   Options MultiViews Indexes SymLinksIfOwnerMatch IncludesNoExec
+   <Limit GET POST OPTIONS>
+      Order allow,deny
+      Allow from all
+   </Limit>
+   <LimitExcept GET POST OPTIONS>
+      Order deny,allow Deny from all
+   </LimitExcept>
+   </Directory>
 
 If you find a similar-looking ``Directory`` group in your Apache configuration, the directive to look at inside it is ``Options``. Add ``ExecCGI`` to
 the end of this list if it's missing, and restart the web server.
