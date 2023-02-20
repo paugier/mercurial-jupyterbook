@@ -1,43 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="744.09448819"
-   height="1052.3622047"
+   width="571.23114"
+   height="200.00043"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.46"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    sodipodi:docname="filelog.svg"
-   sodipodi:docbase="/home/arun/hgbook/en"
-   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs4">
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_x="0 : -326.18067 : 1"
        inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="744.09448 : 526.18109 : 1"
-       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : -326.18067 : 1"
+       inkscape:persp3d-origin="372.04724 : -501.57437 : 1"
        id="perspective57" />
     <marker
        inkscape:stockid="Arrow1Mend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow1Mend"
-       style="overflow:visible;">
+       style="overflow:visible">
       <path
          id="path3128"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
-         transform="scale(0.4) rotate(180) translate(10,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
     </marker>
     <linearGradient
        id="linearGradient2887">
@@ -193,15 +194,17 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="455.8122"
-     inkscape:cy="520"
+     inkscape:cx="383.92857"
+     inkscape:cy="168.92857"
      inkscape:document-units="px"
      inkscape:current-layer="g2940"
-     inkscape:window-width="1680"
-     inkscape:window-height="970"
-     inkscape:window-x="3"
-     inkscape:window-y="46"
-     showgrid="false" />
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     showgrid="false"
+     inkscape:pagecheckerboard="0"
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -216,16 +219,17 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-72.230997,-351.32102)">
     <rect
-       style="opacity:1;fill:#abadf8;fill-opacity:1;stroke:#595959;stroke-width:0.93760371;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#abadf8;fill-opacity:1;stroke:#595959;stroke-width:0.937604;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect3180"
        width="273.81375"
        height="199.06245"
        x="369.1796"
        y="351.79019" />
     <rect
-       style="opacity:1;fill:#a2f69c;fill-opacity:1;stroke:#595959;stroke-width:0.93760341;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#a2f69c;fill-opacity:1;stroke:#595959;stroke-width:0.937603;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect3178"
        width="273.81339"
        height="199.06233"
@@ -237,7 +241,7 @@
       <g
          id="g2940">
         <rect
-           style="fill:url(#linearGradient3260);fill-opacity:1;stroke:#000000;stroke-width:0.89536202;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           style="fill:url(#linearGradient3260);fill-opacity:1;stroke:#000000;stroke-width:0.895362;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
            id="rect2914"
            width="227.38896"
            height="39.500999"
@@ -245,7 +249,7 @@
            y="395.08627" />
         <text
            xml:space="preserve"
-           style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Times New Roman"
+           style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Times New Roman';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            x="323.72824"
            y="416.7626"
            id="text2918"><tspan
@@ -253,7 +257,7 @@
              id="tspan2920"
              x="323.72824"
              y="416.7626"
-             style="font-family:Courier">.hg/store/data/_r_e_a_d_m_e.i</tspan></text>
+             style="font-size:12px;line-height:1.25;font-family:Courier">.hg/store/data/_r_e_a_d_m_e.i</tspan></text>
       </g>
       <g
          transform="translate(3.79093e-5,-80.1853)"
@@ -266,14 +270,14 @@
              height="39.500999"
              width="227.17694"
              id="rect2947"
-             style="fill:url(#linearGradient3262);fill-opacity:1;stroke:#000000;stroke-width:1.10706258;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+             style="fill:url(#linearGradient3262);fill-opacity:1;stroke:#000000;stroke-width:1.10706;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
           <text
              id="text2949"
              y="498.35123"
              x="31.230644"
-             style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Times New Roman"
+             style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Times New Roman';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              xml:space="preserve"><tspan
-               style="font-family:Courier"
+               style="font-size:12px;line-height:1.25;font-family:Courier"
                y="498.35123"
                x="31.230644"
                id="tspan2951"
@@ -283,18 +287,19 @@
       <path
          inkscape:connector-type="polyline"
          id="path2960"
-         d="M 242.94685,414.91115 C 242.94685,414.91115 293.61127,415.26754 310.16269,415.38633"
-         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1.02046943px;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Mend);stroke-opacity:1"
-         sodipodi:nodetypes="cz" />
+         d="m 242.94685,414.91115 67.21584,0.47518"
+         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1.02047px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+         sodipodi:nodetypes="cz"
+         inkscape:connector-curvature="0" />
     </g>
     <g
        id="g3156"
        transform="translate(80.467048,0.71578)">
       <g
-         transform="translate(116,0)"
+         transform="translate(116)"
          id="g2831">
         <rect
-           style="fill:url(#linearGradient3256);fill-opacity:1;stroke:#000000;stroke-width:1.11001658;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           style="fill:url(#linearGradient3256);fill-opacity:1;stroke:#000000;stroke-width:1.11002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
            id="rect1906"
            width="228.18446"
            height="60.499123"
@@ -307,9 +312,9 @@
              id="text1884"
              y="483.92801"
              x="208.95944"
-             style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Times New Roman"
+             style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Times New Roman';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              xml:space="preserve"><tspan
-               style="font-family:Courier"
+               style="font-size:12px;line-height:1.25;font-family:Courier"
                y="483.92801"
                x="208.95944"
                id="tspan1886"
@@ -318,9 +323,9 @@
              id="text1888"
              y="507.79309"
              x="208.95944"
-             style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Times New Roman"
+             style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Times New Roman';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              xml:space="preserve"><tspan
-               style="font-family:Courier"
+               style="font-size:12px;line-height:1.25;font-family:Courier"
                y="507.79309"
                x="208.95944"
                id="tspan1890"
@@ -330,7 +335,7 @@
       <g
          id="g2907">
         <rect
-           style="fill:url(#linearGradient3258);fill-opacity:1;stroke:#000000;stroke-width:1.10706329;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           style="fill:url(#linearGradient3258);fill-opacity:1;stroke:#000000;stroke-width:1.10706;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
            id="rect2843"
            width="227.17728"
            height="39.500999"
@@ -338,7 +343,7 @@
            y="475.4968" />
         <text
            xml:space="preserve"
-           style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Times New Roman"
+           style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Times New Roman';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            x="31.230644"
            y="498.35123"
            id="text2847"><tspan
@@ -346,36 +351,39 @@
              id="tspan2849"
              x="31.230644"
              y="498.35123"
-             style="font-family:Courier">src/hello.c</tspan></text>
+             style="font-size:12px;line-height:1.25;font-family:Courier">src/hello.c</tspan></text>
       </g>
       <path
          inkscape:connection-end="#g2831"
          inkscape:connection-start="#g2907"
          inkscape:connector-type="polyline"
          id="path2962"
-         d="M 242.4315,495.88043 C 242.4315,495.88043 292.8861,495.99942 310.04102,496.03909"
-         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Mend);stroke-opacity:1"
-         sodipodi:nodetypes="cs" />
+         d="m 242.72808,495.44685 68.79911,0.12086"
+         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+         sodipodi:nodetypes="cs"
+         inkscape:connector-curvature="0" />
     </g>
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Times New Roman"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Times New Roman';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="98.496666"
        y="373.96353"
        id="text3216"><tspan
          sodipodi:role="line"
          id="tspan3218"
          x="98.496666"
-         y="373.96353">Working directory</tspan></text>
+         y="373.96353"
+         style="font-size:12px;line-height:1.25">Working directory</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Times New Roman"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Times New Roman';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="391.39197"
        y="373.96353"
        id="text3228"><tspan
          sodipodi:role="line"
          id="tspan3230"
          x="391.39197"
-         y="373.96353">Repository</tspan></text>
+         y="373.96353"
+         style="font-size:12px;line-height:1.25">Repository</tspan></text>
   </g>
 </svg>

@@ -1,46 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://web.resource.org/cc/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="744.09448819"
-   height="1052.3622047"
+   width="277.98608"
+   height="210.21428"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.44.1"
-   sodipodi:docname="tour-history.svg">
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="tour-history.svg"
+   version="1.1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs4">
     <marker
        inkscape:stockid="Arrow1Mstart"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow1Mstart"
        style="overflow:visible">
       <path
          id="path2973"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none"
-         transform="scale(0.4) translate(10,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Mend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow1Mend"
-       style="overflow:visible;">
+       style="overflow:visible">
       <path
          id="path3066"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
-         transform="scale(0.4) rotate(180) translate(10,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
     </marker>
   </defs>
   <sodipodi:namedview
@@ -53,15 +55,18 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="232.14286"
-     inkscape:cy="672.75296"
+     inkscape:zoom="0.7"
+     inkscape:cx="35"
+     inkscape:cy="-23.571429"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:window-width="906"
      inkscape:window-height="620"
-     inkscape:window-x="5"
-     inkscape:window-y="49" />
+     inkscape:window-x="26"
+     inkscape:window-y="23"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -76,7 +81,8 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-137,-291.00504)">
     <rect
        style="opacity:1;fill:#a5c3c8;fill-opacity:1;stroke:#6396a0;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect1878"
@@ -86,7 +92,7 @@
        y="479.50504" />
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:Courier;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="162.09892"
        y="493.12619"
        id="text1872"><tspan
@@ -94,7 +100,7 @@
          id="tspan1874"
          x="162.09892"
          y="493.12619"
-         style="font-family:Courier"><tspan
+         style="font-size:12px;line-height:1.25;font-family:Courier"><tspan
    style="font-weight:bold"
    id="tspan1876">0</tspan>: REV0</tspan></text>
     <rect
@@ -106,7 +112,7 @@
        y="432.63004" />
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:Courier;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="162.09892"
        y="446.25119"
        id="text2794"><tspan
@@ -114,7 +120,7 @@
          id="tspan2796"
          x="162.09892"
          y="446.25119"
-         style="font-family:Courier"><tspan
+         style="font-size:12px;line-height:1.25;font-family:Courier"><tspan
    id="tspan2868"
    style="font-weight:bold">1</tspan>: REV1</tspan></text>
     <rect
@@ -126,7 +132,7 @@
        y="385.75504" />
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:Courier;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="162.09892"
        y="399.37619"
        id="text2804"><tspan
@@ -134,7 +140,7 @@
          id="tspan2806"
          x="162.09892"
          y="399.37619"
-         style="font-family:Courier"><tspan
+         style="font-size:12px;line-height:1.25;font-family:Courier"><tspan
    style="font-weight:bold"
    id="tspan2866">2</tspan>: REV2</tspan></text>
     <rect
@@ -146,7 +152,7 @@
        y="338.88007" />
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:Courier;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="162.09892"
        y="352.50122"
        id="text2814"><tspan
@@ -154,7 +160,7 @@
          id="tspan2816"
          x="162.09892"
          y="352.50122"
-         style="font-family:Courier"><tspan
+         style="font-size:12px;line-height:1.25;font-family:Courier"><tspan
    style="font-weight:bold"
    id="tspan2864">3</tspan>: REV3</tspan></text>
     <rect
@@ -166,7 +172,7 @@
        y="292.00504" />
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:Courier;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="162.09892"
        y="305.62619"
        id="text2824"><tspan
@@ -174,59 +180,66 @@
          id="tspan2826"
          x="162.09892"
          y="305.62619"
-         style="font-family:Courier"><tspan
+         style="font-size:12px;line-height:1.25;font-family:Courier"><tspan
    style="font-weight:bold"
    id="tspan2862">4</tspan>: REV4</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:Courier;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="173.57143"
        y="443.79074"
        id="text2832"><tspan
          sodipodi:role="line"
          id="tspan2834"
          x="173.57143"
-         y="443.79074" /></text>
+         y="443.79074"
+         style="font-size:12px;line-height:1.25"> </tspan></text>
     <path
-       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="M 185.14286,478.50504 L 185.14286,454.34432"
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 185.14286,478.50504 V 454.34432"
        id="path2894"
-       inkscape:connector-type="polyline" />
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="M 185.14286,431.63004 L 185.14286,407.46932"
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 185.14286,431.63004 V 407.46932"
        id="path2896"
-       inkscape:connector-type="polyline" />
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="M 185.14286,384.75504 L 185.14286,360.59435"
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 185.14286,384.75504 V 360.59435"
        id="path2898"
-       inkscape:connector-type="polyline" />
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="M 185.14286,337.88007 L 185.14286,313.71932"
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 185.14286,337.88007 V 313.71932"
        id="path2900"
-       inkscape:connector-type="polyline" />
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Times"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:Times;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="244.60992"
        y="305.245"
        id="text1902"><tspan
          sodipodi:role="line"
          id="tspan1904"
          x="244.60992"
-         y="305.245">(newest)</tspan></text>
+         y="305.245"
+         style="font-size:12px;line-height:1.25">(newest)</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Times"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:Times;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="244.60992"
        y="492.745"
        id="text1906"><tspan
          sodipodi:role="line"
          id="tspan1908"
          x="244.60992"
-         y="492.745">(oldest)</tspan></text>
+         y="492.745"
+         style="font-size:12px;line-height:1.25">(oldest)</tspan></text>
     <rect
        style="opacity:1;fill:#d2e1e4;fill-opacity:1;stroke:#b1cbd0;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect1907"
@@ -236,7 +249,7 @@
        y="324.86218" />
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:Courier;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="333.38464"
        y="338.48334"
        id="text1909"><tspan
@@ -244,20 +257,20 @@
          id="tspan1911"
          x="333.38464"
          y="338.48334"
-         style="font-family:Courier"><tspan
+         style="font-size:12px;line-height:1.25;font-family:Courier"><tspan
    style="font-weight:bold"
    id="tspan1913">4</tspan>: REV4</tspan></text>
     <path
-       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Mend);stroke-opacity:1"
-       d="M 332.14286,375.21932 L 335.71429,347.36218"
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 332.14286,375.21932 3.57143,-27.85714"
        id="path2802" />
     <path
-       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Mend);stroke-opacity:1"
-       d="M 372.69968,375.21932 L 369.12825,347.36218"
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 372.69968,375.21932 -3.57143,-27.85714"
        id="path2986" />
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Times"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:Times;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="335.14285"
        y="387.21933"
        id="text2988"><tspan
@@ -265,25 +278,27 @@
          x="335.14285"
          y="387.21933"
          id="tspan3020"
-         style="text-align:end;text-anchor:end">revision</tspan><tspan
+         style="font-size:12px;line-height:1.25;text-align:end;text-anchor:end">revision</tspan><tspan
          sodipodi:role="line"
          x="335.14285"
          y="402.21933"
          id="tspan3014"
-         style="text-align:end;text-anchor:end">number</tspan></text>
+         style="font-size:12px;line-height:1.25;text-align:end;text-anchor:end">number</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Times"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:Times;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="368.71429"
        y="387.21933"
        id="text2994"><tspan
          sodipodi:role="line"
          id="tspan2996"
          x="368.71429"
-         y="387.21933">changeset</tspan><tspan
+         y="387.21933"
+         style="font-size:12px;line-height:1.25">changeset</tspan><tspan
          sodipodi:role="line"
          x="368.71429"
          y="402.21933"
-         id="tspan2998">identifier</tspan></text>
+         id="tspan2998"
+         style="font-size:12px;line-height:1.25">identifier</tspan></text>
   </g>
 </svg>
