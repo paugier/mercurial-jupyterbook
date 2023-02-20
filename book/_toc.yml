@@ -32,5 +32,5 @@ parts:
     chapters:
     - file: appendix/app-license
     - file: appendix/app-srcinstall
-    # - file: appendix/app-svn
+    - file: appendix/app-svn
     - file: appendix/app-git
