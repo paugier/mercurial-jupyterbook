@@ -7,3 +7,4 @@ book/_build
 convert/**/*.md
 
 .vscode
+book/conf.py
