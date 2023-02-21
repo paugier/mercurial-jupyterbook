@@ -11,8 +11,6 @@ kernelspec:
   name: bash
 ---
 
-(chap-branch)=
-
 # Managing releases and branchy development
 
 Mercurial provides several mechanisms for you to manage a project that is making

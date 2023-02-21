@@ -11,8 +11,6 @@ kernelspec:
   name: bash
 ---
 
-(chap-tour-merge)=
-
 # Merging changes
 
 We've now covered cloning a repository, making changes in a repository, and
@@ -68,8 +66,7 @@ hg commit -A -m "Hello 3"
 
 We should now have two copies of `hello.c` with different contents. The histories
 of the two repositories have also diverged, as illustrated in
-{ref}`fig:tour-merge:sep-repos <fig:tour-merge:sep-repos>`. Here is a copy of our
-file from one repository.
+{numref}`fig-merge-sep-repos`. Here is a copy of our file from one repository.
 
 ```{code-cell}
 cat hello.py
@@ -81,9 +78,10 @@ And here is our slightly different version from the other repository.
 cat ../my-hello/hello.py
 ```
 
-(fig-tour-merge-sep-repos)=
-
 ```{figure} ../figs/tour-merge-sep-repos.svg
+---
+name: fig-merge-sep-repos
+---
 Divergent recent histories of the my-hello and my-new-hello repositories
 ```
 
@@ -104,20 +102,20 @@ a changeset that has no children. The tip revision is thus a head, because the
 newest revision in a repository doesn't have any children. There are times when a
 repository can contain more than one head.
 
-(fig-tour-merge-pull)=
-
 ```{figure} ../figs/tour-merge-pull.svg
+---
+name: fig-merge-pull
+---
 Repository contents after pulling from my-hello into my-new-hello
 ```
 
-In {ref}`fig:tour-merge:pull <fig:tour-merge:pull>`, you can see the effect of the
-pull from `my-hello` into `my-new-hello`. The history that was already present in
-`my-new-hello` is untouched, but a new revision has been added. By referring to
-{ref}`fig:tour-merge:sep-repos <fig:tour-merge:sep-repos>`, we can see that the
-*changeset ID* remains the same in the new repository, but the *revision number*
-has changed. (This, incidentally, is a fine example of why it's not safe to use
-revision numbers when discussing changesets.) We can view the heads in a
-repository using the `hg heads` command.
+In {numref}`fig-merge-pull`, you can see the effect of the pull from `my-hello`
+into `my-new-hello`. The history that was already present in `my-new-hello` is
+untouched, but a new revision has been added. By referring to
+{numref}`fig-merge-sep-repos`, we can see that the *changeset ID* remains the same
+in the new repository, but the *revision number* has changed. (This, incidentally,
+is a fine example of why it's not safe to use revision numbers when discussing
+changesets.) We can view the heads in a repository using the `hg heads` command.
 
 ```{code-cell}
 hg heads
@@ -174,15 +172,15 @@ its parents. These are the same revisions that were previously displayed by
 hg tip
 ```
 
-In {ref}`fig:tour-merge:merge <fig:tour-merge:merge>`, you can see a
-representation of what happens to the working directory during the merge, and how
-this affects the repository when the commit happens. During the merge, the working
-directory has two parent changesets, and these become the parents of the new
-changeset.
-
-(fig-tour-merge-merge)=
+In {numref}`fig-merge-merge`, you can see a representation of what happens to the
+working directory during the merge, and how this affects the repository when the
+commit happens. During the merge, the working directory has two parent changesets,
+and these become the parents of the new changeset.
 
 ```{figure} ../figs/tour-merge-merge.svg
+---
+name: fig-merge-merge
+---
 Working directory and repository during merge, and following commit
 ```
 
@@ -198,17 +196,17 @@ where each side modifies the same portions of the same files. Unless both
 modifications are identical, this results in a *conflict*, where you have to
 decide how to reconcile the different changes into something coherent.
 
-(fig-tour-merge-conflict)=
-
 ```{figure} ../figs/tour-merge-conflict.svg
+---
+name: fig-merge-conflict
+---
 Conflicting changes to a document
 ```
 
-{ref}`fig:tour-merge:conflict <fig:tour-merge:conflict>` illustrates an instance
-of two conflicting changes to a document. We started with a single version of the
-file; then we made some changes; while someone else made different changes to the
-same text. Our task in resolving the conflicting changes is to decide what the
-file should look like.
+{numref}`fig-merge-conflict` illustrates an instance of two conflicting changes to
+a document. We started with a single version of the file; then we made some
+changes; while someone else made different changes to the same text. Our task in
+resolving the conflicting changes is to decide what the file should look like.
 
 Mercurial doesn't have a built-in facility for handling conflicts. Instead, it
 runs an external program, usually one that displays some kind of graphical
@@ -225,10 +223,10 @@ setting the HGMERGE environment variable to the name of your preferred program.
 
 My preferred graphical merge tool is `kdiff3`, which I'll use to describe the
 features that are common to graphical file merging tools. You can see a screenshot
-of `kdiff3` in action in {ref}`fig:tour-merge:kdiff3 <fig:tour-merge:kdiff3>`. The
-kind of merge it is performing is called a *three-way merge*, because there are
-three different versions of the file of interest to us. The tool thus splits the
-upper portion of the window into three panes:
+of `kdiff3` in action in {numref}`fig-merge-kdiff3`. The kind of merge it is
+performing is called a *three-way merge*, because there are three different
+versions of the file of interest to us. The tool thus splits the upper portion of
+the window into three panes:
 
 - At the left is the *base* version of the file, i.e. the most recent version from
   which the two versions we're trying to merge are descended.
@@ -244,9 +242,10 @@ All four of these panes are *locked together*; if we scroll vertically or
 horizontally in any of them, the others are updated to display the corresponding
 sections of their respective files.
 
-(fig-tour-merge-kdiff3)=
-
 ```{figure} ../figs/kdiff3.png
+---
+name: fig-merge-kdiff3
+---
 Using kdiff3 to merge versions of a file
 ```
 
@@ -263,8 +262,8 @@ are aimed at specialised file formats (generally XML).
 ### A worked example
 
 In this example, we will reproduce the file modification history of
-{ref}`fig:tour-merge:conflict <fig:tour-merge:conflict>` above. Let's begin by
-creating a repository with a base version of our document.
+{numref}`fig-merge-conflict` above. Let's begin by creating a repository with a
+base version of our document.
 
 ```{code-cell}
 cd /tmp/tmp_mercurial_book
@@ -523,8 +522,8 @@ If, for some reason, you decide that this business of automatically propagating
 changes across copies is not for you, simply use your system's normal file copy
 command (on Unix-like systems, that's `cp`) to make a copy of a file, then
 `hg add` the new copy by hand. Before you do so, though, please do reread
-{ref}`sec:daily:why-copy <sec:daily:why-copy>`, and make an informed decision that
-this behavior is not appropriate to your specific case.
+{ref}`sec-daily-why-copy`, and make an informed decision that this behavior is not
+appropriate to your specific case.
 
 ### Renaming files and merging changes
 

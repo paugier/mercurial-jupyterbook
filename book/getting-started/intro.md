@@ -261,8 +261,8 @@ as a revision control system.
 
 - It is easy to learn and use.
 - It is lightweight.
-- It scales excellently. See {ref}`"Scaling Mercurial" <chap:scaling>` for details
-  if you do bump into scaling issues.
+- It scales excellently. See [](../advanced-concepts/scaling.md) for details if
+  you do bump into scaling issues.
 - It is easy to customise.
 
 If you are at all familiar with revision control systems, you should be able to
@@ -334,7 +334,7 @@ check in fifty revisions to an incompressible 10MB file, Subversion's client-sid
 space usage stays constant The space used by any distributed SCM will grow rapidly
 in proportion to the number of revisions, because the differences between each
 revision are large. Mercurial has solved this issue using the largefiles
-extension. See {ref}`"Mercurial Largefiles" <sec:scaling:largefiles>` for details.
+extension. See {ref}`sec-scaling-largefiles` for details.
 
 In addition, it's often difficult or, more usually, impossible to merge different
 versions of a binary file. Subversion's ability to let a user lock a file, so that

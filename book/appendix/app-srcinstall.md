@@ -11,8 +11,6 @@ kernelspec:
   name: bash
 ---
 
-(chap-srcinstall)=
-
 # Installing Mercurial from source
 
 (sec-srcinstall-unixlike)=

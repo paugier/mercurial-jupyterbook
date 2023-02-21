@@ -11,8 +11,6 @@ kernelspec:
   name: bash
 ---
 
-(chap-hook)=
-
 # Handling repository events with hooks
 
 Mercurial offers a powerful mechanism to let you perform automated actions in

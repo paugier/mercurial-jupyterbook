@@ -11,8 +11,6 @@ kernelspec:
   name: bash
 ---
 
-(chap-hgext)=
-
 # Adding functionality with extensions
 
 While the core of Mercurial is quite complete from a functionality standpoint,
@@ -23,20 +21,20 @@ However, Mercurial doesn't box you in with an inflexible command set: you can ad
 features to it as *extensions* (sometimes known as *plugins*). We've already
 discussed a few of these extensions in earlier chapters.
 
-- {ref}`sec:tour-merge:fetch <sec:tour-merge:fetch>` covers the `fetch` extension;
-  this combines pulling new changes and merging them with local changes into a
-  single command, `fetch`.
-- In {ref}`chap:hook\ <chap:hook\>`, we covered several extensions that are useful
-  for hook-related functionality: `acl` adds access control lists; `bugzilla` adds
-  integration with the Bugzilla bug tracking system; and `notify` sends
-  notification emails on new changes.
+- {ref}`sec-tour-merge-fetch` covers the `fetch` extension; this combines pulling
+  new changes and merging them with local changes into a single command, `fetch`.
+
+- In [](../advanced-concepts/hook.md), we covered several extensions that are
+  useful for hook-related functionality: `acl` adds access control lists;
+  `bugzilla` adds integration with the Bugzilla bug tracking system; and `notify`
+  sends notification emails on new changes.
 
 In this chapter, we'll cover some of the other extensions that are available for
 Mercurial, and briefly touch on some of the machinery you'll need to know about if
 you want to write an extension of your own.
 
-- In {ref}`sec:hgext:inotify <sec:hgext:inotify>`, we'll discuss the possibility
-  of *huge* performance improvements using the `inotify` extension.
+- In {ref}`sec-hgext-inotify`, we'll discuss the possibility of *huge* performance
+  improvements using the `inotify` extension.
 
 (sec-hgext-inotify)=
 

@@ -11,8 +11,6 @@ kernelspec:
   name: bash
 ---
 
-(chap-template)=
-
 # Customizing the output of Mercurial
 
 Mercurial provides a powerful mechanism to let you control how it displays

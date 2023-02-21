@@ -11,8 +11,6 @@ kernelspec:
   name: bash
 ---
 
-(chap-concepts)=
-
 # Behind the scenes
 
 Unlike many revision control systems, the concepts upon which Mercurial is built

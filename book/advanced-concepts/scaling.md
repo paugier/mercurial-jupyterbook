@@ -11,8 +11,6 @@ kernelspec:
   name: bash
 ---
 
-(chap-scaling)=
-
 # Scaling Mercurial
 
 ## Scalability issues

@@ -35,5 +35,7 @@ html:
 sphinx:
   config:
     nb_merge_streams: True
+    # todo: enable this but not sure if it works well...
+    # execution_show_tb: True
   extra_extensions:
     - sphinx.ext.graphviz

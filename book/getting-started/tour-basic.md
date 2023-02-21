@@ -11,8 +11,6 @@ kernelspec:
   name: bash
 ---
 
-(chap-tour-basic)=
-
 # A tour of Mercurial: the basics
 
 (sec-tour-install)=
@@ -56,8 +54,7 @@ username if you wish to contribute yourself to a project that uses Mercurial.
 Mercurial has a number of ways to determine your username. The advised way for
 most users is through a file in your home directory called `.hgrc`, with a
 username entry, that will be used next. To see what the contents of this file
-should look like, refer to
-{ref}`sec:tour-basic:username <sec:tour-basic:username>`.
+should look like, refer to {ref}`sec-tour-basic-username`.
 
 Mercurial checks quite a few additional locations to determine what username to
 use.
@@ -447,14 +444,15 @@ The fields in a record of output from `hg log` are as follows.
 The default output printed by `hg log` is purely a summary; it is missing a lot of
 detail.
 
-{ref}`fig:tour-basic:history <fig:tour-basic:history>` provides a graphical
-representation of the history of the `hello` repository, to make it a little
-easier to see which direction history is “flowing” in. We'll be returning to this
-figure several times in this chapter and the chapter that follows.
-
-(fig-tour-basic-history)=
+{numref}`fig-tour-basic-history` provides a graphical representation of the
+history of the `hello` repository, to make it a little easier to see which
+direction history is “flowing” in. We'll be returning to this figure several times
+in this chapter and the chapter that follows.
 
 ```{figure} ../figs/tour-history.svg
+---
+name: fig-tour-basic-history
+---
 Graphical history of the hello repository
 ```
 
@@ -707,11 +705,10 @@ simply identify the change that you want to pull by its changeset ID, e.g. `hg p
 ### Updating the working directory
 
 We have so far glossed over the relationship between a repository and its working
-directory. The `hg pull` command that we ran in
-{ref}`sec:tour:pull <sec:tour:pull>` brought changes into the repository, but if
-we check, there's no sign of those changes in the working directory. This is
-because `hg pull` does not (by default) touch the working directory. Instead, we
-use the `hg update` command to do this.
+directory. The `hg pull` command that we ran in {ref}`sec-tour-pull` brought
+changes into the repository, but if we check, there's no sign of those changes in
+the working directory. This is because `hg pull` does not (by default) touch the
+working directory. Instead, we use the `hg update` command to do this.
 
 ```{code-cell}
 grep printf hello.c
@@ -730,10 +727,9 @@ terribly happy.
 Since pull-then-update is such a common sequence of operations, Mercurial lets you
 combine the two by passing the `-u` option to `hg pull`.
 
-If you look back at the output of `hg pull` in
-{ref}`sec:tour:pull <sec:tour:pull>` when we ran it without `-u`, you can see that
-it printed a helpful reminder that we'd have to take an explicit step to update
-the working directory.
+If you look back at the output of `hg pull` in {ref}`sec-tour-pull` when we ran it
+without `-u`, you can see that it printed a helpful reminder that we'd have to
+take an explicit step to update the working directory.
 
 To find out what revision the working directory is at, use the `hg parents`
 command.
@@ -742,11 +738,11 @@ command.
 hg parents
 ```
 
-If you look back at {ref}`fig:tour-basic:history <fig:tour-basic:history>`, you'll
-see arrows connecting each changeset. The node that the arrow leads *from* in each
-case is a parent, and the node that the arrow leads *to* is its child. The working
-directory has a parent in just the same way; this is the changeset that the
-working directory currently contains.
+If you look back at {numref}`fig-tour-basic-history`, you'll see arrows connecting
+each changeset. The node that the arrow leads *from* in each case is a parent, and
+the node that the arrow leads *to* is its child. The working directory has a
+parent in just the same way; this is the changeset that the working directory
+currently contains.
 
 To update the working directory to a particular revision, give a revision number
 or changeset ID to the `hg update` command.

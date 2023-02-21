@@ -11,8 +11,6 @@ kernelspec:
   name: bash
 ---
 
-(chap-daily)=
-
 # Handling files in Mercurial
 
 ## Telling Mercurial which files to track
@@ -231,8 +229,6 @@ echo c > c
 hg commit -A -m 'Commit with addremove'
 ```
 
-(chap-daily-copy)=
-
 ## Copying files
 
 Mercurial provides a `hg copy` command that lets you make a new copy of a file.
@@ -357,7 +353,7 @@ mistake, you can still do something about it, though your options may be more
 limited.
 
 For more information about the `hg revert` command, and details about how to deal
-with changes you have already committed, see {ref}`chap:undo\ <chap:undo\>`.
+with changes you have already committed, see [](./undo.md).
 
 ## More useful diffs
 

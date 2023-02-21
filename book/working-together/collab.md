@@ -49,8 +49,7 @@ are several good ways to do this.
 
 The easiest and fastest way to get started in an informal environment is to use
 the `hg serve` command, which is best suited to short-term “lightweight” serving.
-See {ref}`sec:collab:serve <sec:collab:serve>` below for details of how to use
-this command.
+See {ref}`sec-collab-serve` below for details of how to use this command.
 
 For longer-lived repositories that you'd like to have permanently available, there
 are several public hosting services available. Some are free to open source
@@ -59,8 +58,8 @@ available at <https://www.mercurial-scm.org/wiki/MercurialHosting>.
 
 If you would prefer to host your own repositories, Mercurial has built-in support
 for several popular hosting technologies, most notably CGI (Common Gateway
-Interface), and WSGI (Web Services Gateway Interface). See
-{ref}`sec:collab:cgi <sec:collab:cgi>` for details of CGI and WSGI configuration.
+Interface), and WSGI (Web Services Gateway Interface). See {ref}`sec-collab-cgi`
+for details of CGI and WSGI configuration.
 
 ## Collaboration models
 
@@ -109,12 +108,11 @@ hacking intensely on a handful of projects.
 A sprint or a hacking session in a coffee shop are the perfect places to use the
 `hg serve` command, since `hg serve` does not require any fancy server
 infrastructure. You can get started with `hg serve` in moments, by reading
-{ref}`sec:collab:serve <sec:collab:serve>` below. Then simply tell the person next
-to you that you're running a server, send the URL to them in an instant message,
-and you immediately have a quick-turnaround way to work together. They can type
-your URL into their web browser and quickly review your changes; or they can pull
-a bugfix from you and verify it; or they can clone a branch containing a new
-feature and try it out.
+{ref}`sec-collab-serve` below. Then simply tell the person next to you that you're
+running a server, send the URL to them in an instant message, and you immediately
+have a quick-turnaround way to work together. They can type your URL into their
+web browser and quickly review your changes; or they can pull a bugfix from you
+and verify it; or they can clone a branch containing a new feature and try it out.
 
 The charm, and the problem, with doing things in an ad-hoc fashion like this is
 that only people who know about your changes, and where they are, can see them.
@@ -143,11 +141,10 @@ testing.
 
 If a team is hosting its own repository in this kind of scenario, people will
 usually use the `ssh` protocol to securely push changes to the central repository,
-as documented in {ref}`sec:collab:ssh <sec:collab:ssh>`. It's also usual to
-publish a read-only copy of the repository over HTTP, as in
-{ref}`sec:collab:cgi <sec:collab:cgi>`. Publishing over HTTP satisfies the needs
-of people who don't have push access, and those who want to use web browsers to
-browse the repository's history.
+as documented in {ref}`sec-collab-ssh`. It's also usual to publish a read-only
+copy of the repository over HTTP, as in {ref}`sec-collab-cgi`. Publishing over
+HTTP satisfies the needs of people who don't have push access, and those who want
+to use web browsers to browse the repository's history.
 
 ### A hosted central repository
 

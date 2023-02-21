@@ -11,8 +11,6 @@ kernelspec:
   name: bash
 ---
 
-(chap-undo)=
-
 # Finding and fixing mistakes
 
 To err might be human, but to really handle the consequences will take a top-notch
@@ -321,9 +319,9 @@ hg log --style compact
 ```
 
 Notice that the new changeset that `hg backout` has created is a child of the
-changeset we backed out. It's easier to see this in {ref}`fig-undo-backout`, which
-presents a graphical view of the change history. As you can see, the history is
-nice and linear.
+changeset we backed out. It's easier to see this in {numref}`fig-undo-backout`,
+which presents a graphical view of the change history. As you can see, the history
+is nice and linear.
 
 ```{graphviz} ../figs/undo-simple.dot
 ---
@@ -427,9 +425,9 @@ hg log --style compact
 ```
 
 Again, it's easier to see what has happened by looking at a graph of the revision
-history, in {ref}`fig-undo-backout-manual`. This makes it clear that when we use
-`hg backout` to back out a change other than the tip, Mercurial adds a new head to
-the repository (the change it committed is box-shaped).
+history, in {numref}`fig-undo-backout-manual`. This makes it clear that when we
+use `hg backout` to back out a change other than the tip, Mercurial adds a new
+head to the repository (the change it committed is box-shaped).
 
 ```{graphviz} ../figs/undo-manual.dot
 ---
@@ -584,7 +582,7 @@ One way to do so would be as follows.
 1. Call `hg backout --rev=4 --parent=2`. This tells `hg backout` to back out
    revision 4, which is the bad merge, and to when deciding which revision to
    prefer, to choose parent 2, one of the parents of the merge. The effect can be
-   seen in {ref}`fig-undo-bad-merge-2`.
+   seen in {numref}`fig-undo-bad-merge-2`.
 
    ```{graphviz} ../figs/bad-merge-2.dot
    ---
@@ -595,7 +593,7 @@ One way to do so would be as follows.
 
 2. Call `hg backout --rev=4 --parent=3`. This tells `hg backout` to back out
    revision 4 again, but this time to choose parent 3, the other parent of the
-   merge. The result is visible in {ref}`fig-undo-bad-merge-3`, in which the
+   merge. The result is visible in {numref}`fig-undo-bad-merge-3`, in which the
    repository now contains three heads.
 
    ```{graphviz} ../figs/bad-merge-3.dot
@@ -607,7 +605,7 @@ One way to do so would be as follows.
 
 3. Redo the bad merge by merging the two backout heads, which reduces the number
    of heads in the repository to two, as can be seen in
-   {ref}`fig-undo-bad-merge-4`.
+   {numref}`fig-undo-bad-merge-4`.
 
    ```{graphviz} ../figs/bad-merge-4.dot
    ---
@@ -617,7 +615,7 @@ One way to do so would be as follows.
    ```
 
 4. Merge with the commit that was made after the bad merge, as shown in
-   {ref}`fig-undo-bad-merge-5`.
+   {numref}`fig-undo-bad-merge-5`.
 
    ```{graphviz} ../figs/bad-merge-5.dot
    ---
