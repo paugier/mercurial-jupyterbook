@@ -10,8 +10,14 @@ readme = "README.md"
 python = "^3.10"
 jupyter-book = "^0.13.2"
 bash_kernel = "^0.9.0"
-black = {extras = ["jupyter"], version = "^23.1.0"}
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+jupyterlab-myst = "^1.0.1"
 rst-to-myst = "^0.3.4"
+black = {extras = ["jupyter"], version = "^23.1.0"}
 
 [build-system]
 requires = ["poetry-core"]

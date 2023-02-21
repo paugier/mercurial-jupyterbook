@@ -151,7 +151,7 @@ lxml = ["lxml"]
 name = "black"
 version = "23.1.0"
 description = "The uncompromising code formatter."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -737,6 +737,17 @@ nbformat = "*"
 Sphinx = ">=2"
 
 [[package]]
+name = "jupyterlab-myst"
+version = "1.0.1"
+description = "Use MyST in JupyterLab"
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+test = ["coverage", "pytest", "pytest-asyncio", "pytest-cov", "pytest-tornasync"]
+
+[[package]]
 name = "jupyterlab-pygments"
 version = "0.2.2"
 description = "Pygments theme using JupyterLab CSS variables"
@@ -836,7 +847,7 @@ traitlets = "*"
 name = "mdformat"
 version = "0.7.16"
 description = "CommonMark compliant Markdown formatter"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -848,7 +859,7 @@ tomli = {version = ">=1.1.0", markers = "python_version < \"3.11\""}
 name = "mdformat_deflist"
 version = "0.1.2"
 description = "An mdformat plugin for markdown-it-deflist."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -864,7 +875,7 @@ test = ["coverage", "pytest (>=6.0,<7.0)", "pytest-cov"]
 name = "mdformat-frontmatter"
 version = "2.0.1"
 description = "An mdformat plugin for parsing / ignoring frontmatter."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -881,7 +892,7 @@ test = ["coverage", "pytest (>=6.0,<7.0)", "pytest-cov"]
 name = "mdformat_myst"
 version = "0.1.4"
 description = "Mdformat plugin for MyST compatibility."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -900,7 +911,7 @@ test = ["coverage", "pytest", "pytest-cov"]
 name = "mdformat_tables"
 version = "0.4.1"
 description = "An mdformat plugin for rendering tables."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6.1"
 
@@ -938,7 +949,7 @@ python-versions = "*"
 name = "mypy-extensions"
 version = "1.0.0"
 description = "Type system extensions for programs checked with the mypy type checker."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
 
@@ -1201,7 +1212,7 @@ testing = ["docopt", "pytest (<6.0.0)"]
 name = "pathspec"
 version = "0.11.0"
 description = "Utility library for gitignore style pattern matching of file paths."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -1466,7 +1477,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 name = "rst-to-myst"
 version = "0.3.4"
 description = "Convert RST to MyST-Markdown."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -1488,7 +1499,7 @@ test = ["coverage", "pytest (>=6.0,<7.0)", "pytest-cov", "pytest-regressions"]
 name = "ruamel.yaml"
 version = "0.17.21"
 description = "ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3"
 
@@ -1503,7 +1514,7 @@ jinja2 = ["ruamel.yaml.jinja2 (>=0.2)"]
 name = "ruamel.yaml.clib"
 version = "0.2.7"
 description = "C version of reader, parser and emitter for ruamel.yaml derived from libyaml"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
 
@@ -1925,7 +1936,7 @@ test = ["flake8", "isort", "pytest"]
 name = "tokenize-rt"
 version = "5.0.0"
 description = "A wrapper around the stdlib `tokenize` which roundtrips."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -1933,7 +1944,7 @@ python-versions = ">=3.7"
 name = "tomli"
 version = "2.0.1"
 description = "A lil' TOML parser"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -2066,7 +2077,7 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "a6db546e3254f6fff8c5f3d1897d58142fdf5cba20796c936bd4e7470ba534a3"
+content-hash = "0abfb6ad477a8c7a0a0e51162330cc69bc18fa24e0783c1c5c63dc18f332c803"
 
 [metadata.files]
 alabaster = [
@@ -2539,6 +2550,10 @@ jupyter-server-terminals = [
 jupyter-sphinx = [
     {file = "jupyter_sphinx-0.3.2-py3-none-any.whl", hash = "sha256:301e36d0fb3007bb5802f6b65b60c24990eb99c983332a2ab6eecff385207dc9"},
     {file = "jupyter_sphinx-0.3.2.tar.gz", hash = "sha256:37fc9408385c45326ac79ca0452fbd7ae2bf0e97842d626d2844d4830e30aaf2"},
+]
+jupyterlab-myst = [
+    {file = "jupyterlab_myst-1.0.1-py3-none-any.whl", hash = "sha256:b00b8e6d6b4bb522b3c2a1a8cdaf00cb049776125208a1b14c85c38ffe0146a8"},
+    {file = "jupyterlab_myst-1.0.1.tar.gz", hash = "sha256:1fadd9800bb7f157abc719c589eddea898dae41a4f68e145b858fd67a5a8d540"},
 ]
 jupyterlab-pygments = [
     {file = "jupyterlab_pygments-0.2.2-py2.py3-none-any.whl", hash = "sha256:2405800db07c9f770863bcf8049a529c3dd4d3e28536638bd7c1c01d2748309f"},
