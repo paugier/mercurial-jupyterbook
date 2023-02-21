@@ -452,3 +452,53 @@ touch randomnewfile
 hg add randomnewfile
 hg commit -m "my new anonymous branch"
 ```
+
+The equivalent in Git would be something like:
+
+```
+$ git checkout master~5
+Note: checking out 'master~5'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+$ echo foo > foo
+$ git commit -m 'make new head'
+[detached HEAD 24da4b1] make new head
+1 file changed, 1 insertion(+)
+
+$ git checkout master
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  24da4b1 make new head
+
+If you want to keep them by creating a new branch, this may be a good time
+to do so with:
+
+  git branch new_branch_name 24da4b1
+
+Switched to branch 'master'
+```
+
+What Git is saying here is that Git needs a named reference (a branch) to the
+commit you just made so it can find it later. This is because Git uses references
+for commit discovery and commits without references eventually get garbage
+collected and lost forever.
+
+Mercurial doesn't impose this requirement. Instead, Mercurial's store holds on to
+the commit forever. If someone clones this repository, the anonymous head will be
+cloned with it.
+
+Because Mercurial doesn't impose the requirement that heads be named (hold a
+reference), Mercurial's heads are lighter weight than Git's.
+
+Of course, attaching names to heads is generally a good practice. So Mercurial's
+non-requirement around naming can't really be considered a significant advantage
+over Git.

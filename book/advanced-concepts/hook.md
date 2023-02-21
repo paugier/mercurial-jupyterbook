@@ -261,8 +261,8 @@ Mercurial will print a message before it calls each hook.
 
 ### Choosing how your hook should run
 
-You can write a hook either as a normal program—typically a shell script—or as a
-Python function that is executed within the Mercurial process.
+You can write a hook either as a normal program - typically a shell script - or as
+a Python function that is executed within the Mercurial process.
 
 Writing a hook as an external program has the advantage that it requires no
 knowledge of Mercurial's internals. You can call normal Mercurial commands to get
@@ -494,7 +494,7 @@ directory of a Mercurial source tree. If you are using a Mercurial binary packag
 the hooks will be located in the `hgext` directory of wherever your package
 installer put Mercurial.
 
-### `acl`—access control for parts of a repository
+### `acl` - access control for parts of a repository
 
 The `acl` extension lets you control which remote users are allowed to push
 changesets to a networked server. You can protect any portion of a repository
@@ -573,7 +573,7 @@ debug = true
 With this enabled, the `acl` hook will print enough information to let you figure
 out why it is allowing or forbidding pushes from specific users.
 
-### `bugzilla`—integration with Bugzilla
+### `bugzilla` - integration with Bugzilla
 
 The `bugzilla` extension adds a comment to a Bugzilla bug whenever it finds a
 reference to that bug ID in a commit comment. You can install this hook on a
@@ -581,7 +581,7 @@ shared server, so that any time a remote user pushes changes to this server, the
 hook gets run.
 
 It adds a comment to the bug that looks like this (you can configure the contents
-of the comment—see below):
+of the comment - see below):
 
 ```
 Changeset aad8b264143a, made by Joe User
@@ -783,7 +783,7 @@ What this means is that the committer's address, `john.q.public@example.com`, is
 not a valid Bugzilla user name, nor does it have an entry in your `usermap` that
 maps it to a valid Bugzilla user name.
 
-### `notify`—send email notifications
+### `notify` - send email notifications
 
 Although Mercurial's built-in web server provides RSS feeds of changes in every
 repository, many people prefer to receive change notifications via email. The
@@ -943,7 +943,7 @@ between repositories. This is provided by Mercurial in a Python parameter named
 
 (sec-hook-url)=
 
-## Where changes are going—remote repository URLs
+## Where changes are going - remote repository URLs
 
 When possible, Mercurial will tell a hook the location of the “far side” of an
 activity that transfers changeset data between repositories. This is provided by
@@ -955,16 +955,16 @@ being served via http or ssh, Mercurial cannot tell where the remote repository
 is, but it may know where the client is connecting from. In such cases, the URL
 will take one of the following forms:
 
-- `remote:ssh:1.2.3.4`—remote ssh client, at the IP address `1.2.3.4`.
-- `remote:http:1.2.3.4`—remote http client, at the IP address `1.2.3.4`. If the
+- `remote:ssh:1.2.3.4` - remote ssh client, at the IP address `1.2.3.4`.
+- `remote:http:1.2.3.4` - remote http client, at the IP address `1.2.3.4`. If the
   client is using SSL, this will be of the form `remote:https:1.2.3.4`.
-- Empty—no information could be discovered about the remote client.
+- Empty - no information could be discovered about the remote client.
 
 ## Hook reference
 
 (sec-hook-changegroup)=
 
-### `changegroup`—after remote changesets added
+### `changegroup` - after remote changesets added
 
 This hook is run after a group of pre-existing changesets has been added to the
 repository, for example via a `hg pull` or `hg unbundle`. This hook is run once
@@ -986,13 +986,13 @@ Parameters to this hook:
 - `url`: A URL. The location of the remote repository, if known. See
   {ref}`sec-hook-url` for more information.
 
-See also: `incoming` ({ref}`sec-hook-incoming`), `prechangegroup`
-({ref}`sec-hook-prechangegroup`), `pretxnchangegroup`
-({ref}`sec-hook-pretxnchangegroup`)
+See also: [`incoming`](sec-hook-incoming),
+[`prechangegroup`](sec-hook-prechangegroup),
+[`pretxnchangegroup`](sec-hook-pretxnchangegroup).
 
 (sec-hook-commit)=
 
-### `commit`—after a new changeset is created
+### `commit` - after a new changeset is created
 
 This hook is run after a new changeset has been created.
 
@@ -1004,12 +1004,12 @@ Parameters to this hook:
 - `parent2`: A changeset ID. The changeset ID of the second parent of the newly
   committed changeset.
 
-See also: `precommit` ({ref}`sec-hook-precommit`), `pretxncommit`
-({ref}`sec-hook-pretxncommit`)
+See also: [`precommit`](sec-hook-precommit),
+[`pretxncommit`](sec-hook-pretxncommit).
 
 (sec-hook-incoming)=
 
-### `incoming`—after one remote changeset is added
+### `incoming` - after one remote changeset is added
 
 This hook is run after a pre-existing changeset has been added to the repository,
 for example via a `hg push`. If a group of changesets was added in a single
@@ -1027,13 +1027,13 @@ Parameters to this hook:
 - `url`: A URL. The location of the remote repository, if known. See
   {ref}`sec-hook-url` for more information.
 
-See also: `changegroup` ({ref}`sec-hook-changegroup`) `prechangegroup`
-({ref}`sec-hook-prechangegroup`), `pretxnchangegroup`
-({ref}`sec-hook-pretxnchangegroup`)
+See also: [`changegroup`](sec-hook-changegroup),
+[`prechangegroup`](sec-hook-prechangegroup),
+[`pretxnchangegroup`](sec-hook-pretxnchangegroup).
 
 (sec-hook-outgoing)=
 
-### `outgoing`—after changesets are propagated
+### `outgoing` - after changesets are propagated
 
 This hook is run after a group of changesets has been propagated out of this
 repository, for example by a `hg push` or `hg bundle` command.
@@ -1053,11 +1053,11 @@ Parameters to this hook:
 - `url`: A URL. The location of the remote repository, if known. See
   {ref}`sec-hook-url` for more information.
 
-See also: `preoutgoing` ({ref}`sec-hook-preoutgoing`)
+See also: [`preoutgoing`](sec-hook-preoutgoing).
 
 (sec-hook-prechangegroup)=
 
-### `prechangegroup`—before starting to add remote changesets
+### `prechangegroup` - before starting to add remote changesets
 
 This controlling hook is run before Mercurial begins to add a group of changesets
 from another repository.
@@ -1078,13 +1078,12 @@ Parameters to this hook:
 - `url`: A URL. The location of the remote repository, if known. See
   {ref}`sec-hook-url` for more information.
 
-See also: `changegroup` ({ref}`sec-hook-changegroup`), `incoming`
-({ref}`sec-hook-incoming`), `pretxnchangegroup`
-({ref}`sec-hook-pretxnchangegroup`)
+See also: [`changegroup`](sec-hook-changegroup), [`incoming`](sec-hook-incoming),
+[`pretxnchangegroup`](sec-hook-pretxnchangegroup).
 
 (sec-hook-precommit)=
 
-### `precommit`—before starting to commit a changeset
+### `precommit` - before starting to commit a changeset
 
 This hook is run before Mercurial begins to commit a new changeset. It is run
 before Mercurial has any of the metadata for the commit, such as the files to be
@@ -1104,12 +1103,11 @@ Parameters to this hook:
 If the commit proceeds, the parents of the working directory will become the
 parents of the new changeset.
 
-See also: `commit` ({ref}`sec-hook-commit`), `pretxncommit`
-({ref}`sec-hook-pretxncommit`)
+See also: [`commit`](sec-hook-commit), [`pretxncommit`](sec-hook-pretxncommit).
 
 (sec-hook-preoutgoing)=
 
-### `preoutgoing`—before starting to propagate changesets
+### `preoutgoing` - before starting to propagate changesets
 
 This hook is invoked before Mercurial knows the identities of the changesets to be
 transmitted.
@@ -1126,11 +1124,11 @@ Parameters to this hook:
 - `url`: A URL. The location of the remote repository, if known. See
   {ref}`sec-hook-url` for more information.
 
-See also: `outgoing` ({ref}`sec-hook-outgoing`)
+See also: [`outgoing`](sec-hook-outgoing)
 
 (sec-hook-pretag)=
 
-### `pretag`—before tagging a changeset
+### `pretag` - before tagging a changeset
 
 This controlling hook is run before a tag is created. If the hook succeeds,
 creation of the tag proceeds. If the hook fails, the tag is not created.
@@ -1146,14 +1144,14 @@ If the tag to be created is revision-controlled, the `precommit` and
 `pretxncommit` hooks ({ref}`sec-hook-commit` and {ref}`sec-hook-pretxncommit`)
 will also be run.
 
-See also: `tag` ({ref}`sec-hook-tag`)
+See also: [`tag`](sec-hook-tag).
 
 (sec-hook-pretxnchangegroup)=
 
-### `pretxnchangegroup`—before completing addition of remote changesets
+### `pretxnchangegroup` - before completing addition of remote changesets
 
-This controlling hook is run before a transaction—that manages the addition of a
-group of new changesets from outside the repository—completes. If the hook
+This controlling hook is run before a transaction - that manages the addition of a
+group of new changesets from outside the repository - completes. If the hook
 succeeds, the transaction completes, and all of the changesets become permanent
 within this repository. If the hook fails, the transaction is rolled back, and the
 data for the changesets is erased.
@@ -1179,17 +1177,17 @@ Parameters to this hook:
 - `url`: A URL. The location of the remote repository, if known. See
   {ref}`sec-hook-url` for more information.
 
-See also: `changegroup` ({ref}`sec-hook-changegroup`), `incoming`
-({ref}`sec-hook-incoming`), `prechangegroup` ({ref}`sec-hook-prechangegroup`)
+See also: [`changegroup`](sec-hook-changegroup), [`incoming`](sec-hook-incoming),
+[`prechangegroup`](sec-hook-prechangegroup).
 
 (sec-hook-pretxncommit)=
 
-### `pretxncommit`—before completing commit of new changeset
+### `pretxncommit` - before completing commit of new changeset
 
-This controlling hook is run before a transaction—that manages a new
-commit—completes. If the hook succeeds, the transaction completes and the
-changeset becomes permanent within this repository. If the hook fails, the
-transaction is rolled back, and the commit data is erased.
+This controlling hook is run before a transaction - that manages a new commit -
+completes. If the hook succeeds, the transaction completes and the changeset
+becomes permanent within this repository. If the hook fails, the transaction is
+rolled back, and the commit data is erased.
 
 This hook can access the metadata associated with the almost-new changeset, but it
 should not do anything permanent with this data. It must also not modify the
@@ -1207,11 +1205,11 @@ Parameters to this hook:
 - `parent2`: A changeset ID. The changeset ID of the second parent of the newly
   committed changeset.
 
-See also: `precommit` ({ref}`sec-hook-precommit`)
+See also: [`precommit`](sec-hook-precommit).
 
 (sec-hook-preupdate)=
 
-### `preupdate`—before updating or merging working directory
+### `preupdate` - before updating or merging working directory
 
 This controlling hook is run before an update or merge of the working directory
 begins. It is run only if Mercurial's normal pre-update checks determine that the
@@ -1226,11 +1224,11 @@ Parameters to this hook:
 - `parent2`: A changeset ID. Only set if the working directory is being merged.
   The ID of the revision that the working directory is being merged with.
 
-See also: `update` ({ref}`sec-hook-update`)
+See also: [`update`](sec-hook-update).
 
 (sec-hook-tag)=
 
-### `tag`—after tagging a changeset
+### `tag` - after tagging a changeset
 
 This hook is run after a tag has been created.
 
@@ -1244,11 +1242,11 @@ Parameters to this hook:
 If the created tag is revision-controlled, the `commit` hook (section
 {ref}`sec-hook-commit`) is run before this hook.
 
-See also: `pretag` ({ref}`sec-hook-pretag`)
+See also: [`pretag`](sec-hook-pretag).
 
 (sec-hook-update)=
 
-### `update`—after updating or merging working directory
+### `update` - after updating or merging working directory
 
 This hook is run after an update or merge of the working directory completes.
 Since a merge can fail (if the external `hgmerge` command fails to resolve
@@ -1263,4 +1261,4 @@ cleanly.
 - `parent2`: A changeset ID. Only set if the working directory was merged. The ID
   of the revision that the working directory was merged with.
 
-See also: `preupdate` ({ref}`sec-hook-preupdate`)
+See also: [`preupdate`](sec-hook-preupdate).
