@@ -41,7 +41,7 @@ revision control tool for a project.
   out to be in error, you can revert to an earlier version of one or more files.
   In fact, a *really* good revision control tool will even help you to efficiently
   figure out exactly when a problem was introduced (see
-  {ref}`"Finding the source of a bug" <sec:undo:bisect>` for details).
+  {ref}`"Finding the source of a bug" <sec-undo-bisect>` for details).
 - It will help you to work simultaneously on, and manage the drift between,
   multiple versions of your project.
 

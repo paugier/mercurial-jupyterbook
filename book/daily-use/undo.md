@@ -35,13 +35,12 @@ changeset is not as common, but no less annoying.
 
 ### Rolling back a transaction
 
-In {ref}`sec:concepts:txn <sec:concepts:txn>`, I mentioned that Mercurial treats
-each modification of a repository as a *transaction*. Every time you commit a
-changeset or pull changes from another repository, Mercurial remembers what you
-did. You can undo, or *roll back*, exactly one of these actions using the
-`hg rollback` command. (See
-{ref}`sec:undo:rollback-after-push <sec:undo:rollback-after-push>` for an
-important caveat about the use of this command.)
+In {ref}`sec-concepts-txn`, I mentioned that Mercurial treats each modification of
+a repository as a *transaction*. Every time you commit a changeset or pull changes
+from another repository, Mercurial remembers what you did. You can undo, or *roll
+back*, exactly one of these actions using the `hg rollback` command. (See
+{ref}`sec-undo-rollback-after-push` for an important caveat about the use of this
+command.)
 
 Here's a mistake that I often find myself making: committing a change in which
 I've created and referenced a new file, but forgotten to `hg add` it.
@@ -274,7 +273,7 @@ Before you read this section, here's something to keep in mind: the `hg backout`
 command undoes the effect of a change by *adding* to your repository's history,
 not by modifying or erasing it. It's the right tool to use if you're fixing bugs,
 but not if you're trying to undo some change that has catastrophic consequences.
-To deal with those, see {ref}`sec:undo:aaaiiieee <sec:undo:aaaiiieee>`.
+To deal with those, see {ref}`sec-undo-aaaiiieee`.
 
 ### Backing out a changeset
 
@@ -322,15 +321,15 @@ hg log --style compact
 ```
 
 Notice that the new changeset that `hg backout` has created is a child of the
-changeset we backed out. It's easier to see this in
-{ref}`fig:undo:backout <fig:undo:backout>`, which presents a graphical view of the
-change history. As you can see, the history is nice and linear.
-
-(fig-undo-backout)=
-
-Backing out a change using the hg backout command
+changeset we backed out. It's easier to see this in {ref}`fig-undo-backout`, which
+presents a graphical view of the change history. As you can see, the history is
+nice and linear.
 
 ```{graphviz} ../figs/undo-simple.dot
+---
+name: fig-undo-backout
+caption: Backing out a change using the hg backout command
+---
 ```
 
 ### Backing out a non-tip change
@@ -361,22 +360,21 @@ see that the first and third changes are present, but not the second.
 cat myfile
 ```
 
-As the graphical history in
-{ref}`fig:undo:backout-non-tip <fig:undo:backout-non-tip>` illustrates, Mercurial
-still commits one change in this kind of situation (the box-shaped node is the
-ones that Mercurial commits automatically), but the revision graph now looks
-different. Before Mercurial begins the backout process, it first remembers what
-the current parent of the working directory is. It then backs out the target
+As the graphical history in {numref}`fig-undo-backout-non-tip` illustrates,
+Mercurial still commits one change in this kind of situation (the box-shaped node
+is the ones that Mercurial commits automatically), but the revision graph now
+looks different. Before Mercurial begins the backout process, it first remembers
+what the current parent of the working directory is. It then backs out the target
 changeset, and commits that as a changeset. Finally, it merges back to the
 previous parent of the working directory, but notice that it *does not commit* the
 result of the merge. The repository now contains two heads, and the working
 directory is in a merge state.
 
-(fig-undo-backout-non-tip)=
-
-Automated backout of a non-tip change using the hg backout command
-
 ```{graphviz} ../figs/undo-non-tip.dot
+---
+name: fig-undo-backout-non-tip
+caption: Automated backout of a non-tip change using the hg backout command.
+---
 ```
 
 The result is that you end up “back where you were”, only with some extra history
@@ -429,16 +427,15 @@ hg log --style compact
 ```
 
 Again, it's easier to see what has happened by looking at a graph of the revision
-history, in {ref}`fig:undo:backout-manual <fig:undo:backout-manual>`. This makes
-it clear that when we use `hg backout` to back out a change other than the tip,
-Mercurial adds a new head to the repository (the change it committed is
-box-shaped).
-
-(fig-undo-backout-manual)=
-
-Backing out a change using the hg backout command
+history, in {ref}`fig-undo-backout-manual`. This makes it clear that when we use
+`hg backout` to back out a change other than the tip, Mercurial adds a new head to
+the repository (the change it committed is box-shaped).
 
 ```{graphviz} ../figs/undo-manual.dot
+---
+name: fig-undo-backout-manual
+caption: Backing out a change using the hg backout command
+---
 ```
 
 After the `hg backout` command has completed, it leaves the new “backout”
@@ -474,13 +471,13 @@ cat myfile
 ```
 
 Afterwards, the graphical history of our repository looks like
-{ref}`fig:undo:backout-manual-merge <fig:undo:backout-manual-merge>`.
-
-(fig-undo-backout-manual-merge)=
-
-Manually merging a backout change
+{numref}`fig-undo-backout-manual-merge`.
 
 ```{graphviz} ../figs/undo-manual-merge.dot
+---
+name: fig-undo-backout-manual-merge
+caption: Manually merging a backout change
+---
 ```
 
 ### Why `hg backout` works as it does
@@ -542,8 +539,7 @@ Since Mercurial treats history as cumulative—every change builds on top of all
 changes that preceded it—you generally can't just make disastrous changes
 disappear. The one exception is when you've just committed a change, and it hasn't
 been pushed or pulled into another repository. That's when you can safely use the
-`hg rollback` command, as I detailed in
-{ref}`sec:undo:rollback <sec:undo:rollback>`.
+`hg rollback` command, as I detailed in {ref}`sec-undo-rollback`.
 
 After you've pushed a bad change to another repository, you *could* still use
 `hg rollback` to make your local copy of the change disappear, but it won't have
@@ -573,64 +569,62 @@ easily fixed up by hand ought to be very rare, but the `hg backout` command may
 help in making the cleanup easier. It offers a `--parent` option, which lets you
 specify which parent to revert to when backing out a merge.
 
-> (fig-undo-bad-merge-1)=
->
-> ```{graphviz} ../figs/bad-merge-1.dot
-> ```
->
-> A bad merge
+```{graphviz} ../figs/bad-merge-1.dot
+---
+name: fig-undo-bad-merge-1
+caption: A bad merge.
+---
+```
 
-Suppose we have a revision graph like that in
-{ref}`fig:undo:bad-merge-1 <fig:undo:bad-merge-1>`. What we'd like is to *redo*
-the merge of revisions 2 and 3.
+Suppose we have a revision graph like that in {numref}`fig-undo-bad-merge-1`. What
+we'd like is to *redo* the merge of revisions 2 and 3.
 
 One way to do so would be as follows.
 
 1. Call `hg backout --rev=4 --parent=2`. This tells `hg backout` to back out
    revision 4, which is the bad merge, and to when deciding which revision to
    prefer, to choose parent 2, one of the parents of the merge. The effect can be
-   seen in {ref}`fig:undo:bad-merge-2 <fig:undo:bad-merge-2>`.
-
-   (fig-undo-bad-merge-2)=
+   seen in {ref}`fig-undo-bad-merge-2`.
 
    ```{graphviz} ../figs/bad-merge-2.dot
+   ---
+   name: fig-undo-bad-merge-2
+   caption: Backing out the merge, favoring one parent.
+   ---
    ```
-
-   Backing out the merge, favoring one parent
 
 1. Call `hg backout --rev=4 --parent=3`. This tells `hg backout` to back out
    revision 4 again, but this time to choose parent 3, the other parent of the
-   merge. The result is visible in
-   {ref}`fig:undo:bad-merge-3 <fig:undo:bad-merge-3>`, in which the repository now
-   contains three heads.
-
-   (fig-undo-bad-merge-3)=
+   merge. The result is visible in {ref}`fig-undo-bad-merge-3`, in which the
+   repository now contains three heads.
 
    ```{graphviz} ../figs/bad-merge-3.dot
+   ---
+   name: fig-undo-bad-merge-3
+   caption: Backing out the merge, favoring the other parent.
+   ---
    ```
-
-   Backing out the merge, favoring the other parent
 
 1. Redo the bad merge by merging the two backout heads, which reduces the number
    of heads in the repository to two, as can be seen in
-   {ref}`fig:undo:bad-merge-4 <fig:undo:bad-merge-4>`.
-
-   (fig-undo-bad-merge-4)=
+   {ref}`fig-undo-bad-merge-4`.
 
    ```{graphviz} ../figs/bad-merge-4.dot
+   ---
+   name: fig-undo-bad-merge-4
+   caption: Merging the backouts.
+   ---
    ```
-
-   Merging the backouts
 
 1. Merge with the commit that was made after the bad merge, as shown in
-   {ref}`fig:undo:bad-merge-5 <fig:undo:bad-merge-5>`.
-
-   (fig-undo-bad-merge-5)=
+   {ref}`fig-undo-bad-merge-5`.
 
    ```{graphviz} ../figs/bad-merge-5.dot
+   ---
+   name: fig-undo-bad-merge-5
+   caption: Merging the backouts.
+   ---
    ```
-
-   Merging the backouts
 
 ### Protect yourself from “escaped” changes
 
@@ -640,11 +634,11 @@ yourself ahead of time against some classes of bad changeset. This is particular
 easy if your team usually pulls changes from a central repository.
 
 By configuring some hooks on that repository to validate incoming changesets (see
-chapter {ref}`chap:hook\ <chap:hook\>`), you can automatically prevent some kinds
-of bad changesets from being pushed to the central repository at all. With such a
-configuration in place, some kinds of bad changesets will naturally tend to “die
-out” because they can't propagate into the central repository. Better yet, this
-happens without any need for explicit intervention.
+chapter [](../advanced-concepts/hook.md)), you can automatically prevent some
+kinds of bad changesets from being pushed to the central repository at all. With
+such a configuration in place, some kinds of bad changesets will naturally tend to
+“die out” because they can't propagate into the central repository. Better yet,
+this happens without any need for explicit intervention.
 
 For instance, an incoming change hook that verifies that a changeset will actually
 compile can prevent people from inadvertently “breaking the build”.
