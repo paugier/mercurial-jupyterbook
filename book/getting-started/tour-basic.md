@@ -844,3 +844,13 @@ tags: [raises-exception]
 cd my-hello
 hg outgoing ../hello-push
 ```
+
+In this example, we can see what changes we could push to the remote repository,
+but the repository is understandably not set up to let anonymous users push to it.
+
+## Conclusion
+
+It takes just a few moments to start using Mercurial on a new project, which is
+part of its appeal. Revision control is now so easy to work with, we can use it on
+the smallest of projects that we might not have considered with a more complicated
+tool.

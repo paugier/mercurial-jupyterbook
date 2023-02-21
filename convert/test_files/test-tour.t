@@ -143,7 +143,7 @@
   summary:     Trim comments.
 
 
-#$ name: log.range
+#$ name: log-range
 
   $ hg log -r 2:4
   changeset:   2:fef857204a0c
@@ -458,7 +458,7 @@
   adding file changes
   added 1 changesets with 1 changes to 1 files
 
-#$ name: push.nothing
+#$ name: push-nothing
 
   $ hg push ../hello-push
   pushing to ../hello-push
@@ -466,7 +466,7 @@
   no changes found
   [1]
 
-#$ name: outgoing.net
+#$ name: outgoing-net
 
   $ hg outgoing https://bitbucket.org/bos/hg-tutorial-hello
   comparing with https://bitbucket.org/bos/hg-tutorial-hello

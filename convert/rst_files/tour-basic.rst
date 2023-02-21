@@ -368,7 +368,7 @@ can provide as many revisions as you want.
 If you want to see the history of several revisions without having to list each one, you can use *range notation*; this lets you express the idea “I
 want all revisions between ``abc`` and ``def``, inclusive”.
 
-.. include:: examples/results/tour.log.range.lxo
+.. include:: examples/results/tour.log-range.lxo
 
 
 Mercurial also honours the order in which you specify revisions, so ``hg log -r 2:4`` prints 2, 3, and 4. while ``hg log -r 4:2`` prints 4, 3, and 2.
@@ -597,7 +597,7 @@ in it, their work would be disrupted.
 
 What happens if we try to pull or push changes and the receiving repository already has those changes? Nothing too exciting.
 
-.. include:: examples/results/tour.push.nothing.lxo
+.. include:: examples/results/tour.push-nothing.lxo
 
 
 Default locations
@@ -629,7 +629,7 @@ Sharing changes over a network
 The commands we have covered in the previous few sections are not limited to working with local repositories. Each works in exactly the same fashion
 over a network connection; simply pass in a URL instead of a local path.
 
-.. include:: examples/results/tour.outgoing.net.lxo
+.. include:: examples/results/tour.outgoing-net.lxo
 
 
 In this example, we can see what changes we could push to the remote repository, but the repository is understandably not set up to let anonymous
