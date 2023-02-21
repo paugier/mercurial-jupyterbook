@@ -56,4 +56,6 @@ on TikZ/LaTeX)
 tutorial](https://www.mercurial-scm.org/doc/evolution/tutorials/topic-tutorial.html),
 [source](https://foss.heptapod.net/mercurial/evolve/-/blob/branch/default/tests/test-topic-tutorial.t)).
 
+- https://github.com/sphinx-contrib/svgbob
+
 [mercurial book]: https://book.mercurial-scm.org/
