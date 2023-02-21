@@ -463,3 +463,29 @@ hg merge foo
 hg commit -m 'Merge'
 hg tip
 ```
+
+To give a more concrete example, if I'm working on the `bleeding-edge` branch, and
+I want to bring in the latest fixes from the `stable` branch, Mercurial will
+choose the “right” (`bleeding-edge`) branch name when I pull and merge from
+`stable`.
+
+## Branch naming is generally useful
+
+You shouldn't think of named branches as applicable only to situations where you
+have multiple long-lived branches cohabiting in a single repository. They're very
+useful even in the one-branch-per-repository case.
+
+In the simplest case, giving a name to each branch gives you a permanent record of
+which branch a changeset originated on. This gives you more context when you're
+trying to follow the history of a long-lived branchy project.
+
+If you're working with shared repositories, you can set up a `pretxnchangegroup`
+hook on each that will block incoming changes that have the “wrong” branch name.
+This provides a simple, but effective, defence against people accidentally pushing
+changes from a “bleeding edge” branch to a “stable” branch. Such a hook might look
+like this inside the shared repo's `/.hgrc`.
+
+```
+[hooks]
+pretxnchangegroup.branch = hg heads --template '{branches} ' | grep mybranch
+```

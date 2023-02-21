@@ -735,5 +735,22 @@ file.
 hg resolve -l
 ```
 
+In the output from `hg resolve`, a resolved file is marked with `R`, while an
+unresolved file is marked with `U`. If any files are listed with `U`, we know that
+an attempt to commit the results of the merge will fail.
+
+### Resolving a file merge
+
+We have several options to move a file from the unresolved into the resolved
+state. By far the most common is to rerun `hg resolve`. If we pass the names of
+individual files or directories, it will retry the merges of any unresolved files
+present in those locations. We can also pass the `--all` or `-a` option, which
+will retry the merges of *all* unresolved files.
+
+Mercurial also lets us modify the resolution state of a file directly. We can
+manually mark a file as resolved using the `--mark` option, or as unresolved using
+the `--unmark` option. This allows us to clean up a particularly messy merge by
+hand, and to keep track of our progress with each file as we go.
+
 [^id2]: If you're a Unix user, you'll be glad to know that the `hg rename` command can be
     abbreviated as `hg mv`.
