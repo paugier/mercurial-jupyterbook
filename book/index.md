@@ -1,6 +1,6 @@
-# Mercurial: the definitive guide (Third Edition)
+# Mercurial: the definitive guide
 
-This is a work in progress to get a new edition of the Mercurial book.
+This is a work in progress to get a new (third) edition of the Mercurial book.
 
 We welcome contributions to
 [the Hgbook project on Github](https://github.com/paugier/mercurial-jupyterbook).

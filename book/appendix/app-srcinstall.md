@@ -13,7 +13,7 @@ kernelspec:
 
 (chap-srcinstall)=
 
-# Appendix: Installing Mercurial from source
+# Installing Mercurial from source
 
 (sec-srcinstall-unixlike)=
 

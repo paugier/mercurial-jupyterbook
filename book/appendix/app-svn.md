@@ -11,7 +11,7 @@ kernelspec:
   name: bash
 ---
 
-# Appendix: Migrating to Mercurial
+# Migrating to Mercurial
 
 A common way to test the waters with a new revision control tool is to experiment
 with switching an existing project, rather than starting a new project from
@@ -37,7 +37,7 @@ written, it could import history from the following systems:
 - Mercurial
 
 (To see why Mercurial itself is supported as a source, see
-{ref}`svn.filemap\ <svn.filemap\>`.)
+{ref}`svn-filemap`.)
 
 You can enable the extension in the usual way, by editing your `~/.hgrc` file.
 

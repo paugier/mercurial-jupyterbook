@@ -11,7 +11,7 @@ kernelspec:
   name: bash
 ---
 
-# Appendix: Mercurial for Git Users
+# Mercurial for Git Users
 
 Are you a Git user wanting to learn about Mercurial or how to use Mercurial?
 You've come to the right place!
