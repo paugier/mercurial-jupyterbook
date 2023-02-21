@@ -15,6 +15,7 @@ build:
       - poetry config virtualenvs.create false
     post_install:
       - poetry install --no-root
+      - python -m bash_kernel.install
     pre_build:
       - jupyter-book config sphinx book/
 
