@@ -64,10 +64,10 @@ use.
 
 1. If you specify a `-u` or `--user` option to Mercurial commands that need a
    username, this will be used with highest priority.
-1. If you have set the HGUSER environment variable, this is checked next.
-1. The above mentioned `.hgrc` file is next to be checked.
-1. If you have set the EMAIL environment variable, this will be used next.
-1. Mercurial will query your system to find out your local user name and host
+2. If you have set the HGUSER environment variable, this is checked next.
+3. The above mentioned `.hgrc` file is next to be checked.
+4. If you have set the EMAIL environment variable, this will be used next.
+5. Mercurial will query your system to find out your local user name and host
    name, and construct a username from these components. Since this often results
    in a username that is not very useful, it will print a warning if it has to do
    this.

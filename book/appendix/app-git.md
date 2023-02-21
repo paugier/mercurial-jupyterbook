@@ -140,10 +140,10 @@ difficult to maintain. Your options are:
 
 1. Recompile Git with your changes and distribute it to others (adding a feature
    to the canonical Git distribution is equivalent to this).
-1. Provide a replacement binary or script like `git-fetch` and distribute that.
-1. Introduce a new `git-*` binary/command that does what you need and have people
+2. Provide a replacement binary or script like `git-fetch` and distribute that.
+3. Introduce a new `git-*` binary/command that does what you need and have people
    use that command.
-1. Get lucky and find an extensibility point already built into Git.
+4. Get lucky and find an extensibility point already built into Git.
 
 Compared to *download this .py file and add a line to your Mercurial configuration
 file*, Git's extensibility model can be more complicated and prone to

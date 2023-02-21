@@ -367,10 +367,10 @@ Once the server has been set up correctly, the client will automatically execute
 the following steps upon clone:
 
 1. The client contacts the server and sees its capabilities include clone bundles.
-1. The client fetches the manifest and checks which bundle files are most
+2. The client fetches the manifest and checks which bundle files are most
    appropriate.
-1. The client retrieves and applies the most appropriate bundle file.
-1. The client contacts the server once more, to retrieve changesets and other
+3. The client retrieves and applies the most appropriate bundle file.
+4. The client contacts the server once more, to retrieve changesets and other
    repository data that was not present in the clone. The clone bundle should
    contain almost all of the repository data, so this final operation should take
    much less time and processing power.

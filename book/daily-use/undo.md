@@ -486,17 +486,17 @@ Here's a brief description of how the `hg backout` command works.
 
 1. It ensures that the working directory is “clean”, i.e. that the output of
    `hg status -amrd` would be empty.
-1. It remembers the current parent of the working directory. Let's call this
+2. It remembers the current parent of the working directory. Let's call this
    changeset `orig`.
-1. It does the equivalent of an `hg update` to sync the working directory to the
+3. It does the equivalent of an `hg update` to sync the working directory to the
    changeset you want to back out. Let's call this changeset `backout`.
-1. It finds the parent of that changeset. Let's call that changeset `parent`.
-1. For each file that the `backout` changeset affected, it does the equivalent of
+4. It finds the parent of that changeset. Let's call that changeset `parent`.
+5. For each file that the `backout` changeset affected, it does the equivalent of
    a `hg revert -r parent` on that file, to restore it to the contents it had
    before that changeset was committed.
-1. It commits the result as a new changeset. This changeset has `backout` as its
+6. It commits the result as a new changeset. This changeset has `backout` as its
    parent.
-1. If you specify `--merge` on the command line, it merges with `orig`, and
+7. If you specify `--merge` on the command line, it merges with `orig`, and
    commits the result of the merge.
 
 An alternative way to implement the `hg backout` command would be to `hg export`
@@ -593,7 +593,7 @@ One way to do so would be as follows.
    ---
    ```
 
-1. Call `hg backout --rev=4 --parent=3`. This tells `hg backout` to back out
+2. Call `hg backout --rev=4 --parent=3`. This tells `hg backout` to back out
    revision 4 again, but this time to choose parent 3, the other parent of the
    merge. The result is visible in {ref}`fig-undo-bad-merge-3`, in which the
    repository now contains three heads.
@@ -605,7 +605,7 @@ One way to do so would be as follows.
    ---
    ```
 
-1. Redo the bad merge by merging the two backout heads, which reduces the number
+3. Redo the bad merge by merging the two backout heads, which reduces the number
    of heads in the repository to two, as can be seen in
    {ref}`fig-undo-bad-merge-4`.
 
@@ -616,7 +616,7 @@ One way to do so would be as follows.
    ---
    ```
 
-1. Merge with the commit that was made after the bad merge, as shown in
+4. Merge with the commit that was made after the bad merge, as shown in
    {ref}`fig-undo-bad-merge-5`.
 
    ```{graphviz} ../figs/bad-merge-5.dot
@@ -794,9 +794,9 @@ The `hg bisect` command works in steps. Each step proceeds as follows.
      command.
    - If it failed, run the `hg bisect --bad` command.
 
-1. The command uses your information to decide which changeset to test next.
+2. The command uses your information to decide which changeset to test next.
 
-1. It updates the working directory to that changeset, and the process begins
+3. It updates the working directory to that changeset, and the process begins
    again.
 
 The process ends when `hg bisect` identifies a unique changeset that marks the

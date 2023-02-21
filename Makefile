@@ -10,5 +10,5 @@ clean:
 	rm -rf book/_build
 
 format:
-	mdformat README.md book --wrap 82
+	mdformat README.md book
 	black book convert

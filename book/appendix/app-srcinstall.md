@@ -25,7 +25,7 @@ Python (2.6 or newer) available, it is easy to install Mercurial from source.
 1. Download a recent source tarball from
    <https://www.mercurial-scm.org/downloads>.
 
-1. Unpack the tarball:
+2. Unpack the tarball:
 
 ```sh
 gzip -dc mercurial-MYVERSION.tar.gz | tar xf -

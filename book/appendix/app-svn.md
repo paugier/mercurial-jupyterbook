@@ -36,8 +36,7 @@ written, it could import history from the following systems:
 - Perforce
 - Mercurial
 
-(To see why Mercurial itself is supported as a source, see
-{ref}`svn-filemap`.)
+(To see why Mercurial itself is supported as a source, see {ref}`svn-filemap`.)
 
 You can enable the extension in the usual way, by editing your `~/.hgrc` file.
 

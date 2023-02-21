@@ -1,0 +1,2 @@
+wrap = 82         # possible values: {"keep", "no", INTEGER}
+number = true     # possible values: {false, true}
