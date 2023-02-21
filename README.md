@@ -42,8 +42,8 @@ make
 
 Different tools are available:
 
-- asciidag (the Sphinx extension, NOT https://pypi.org/project/asciidag/, based
-on TikZ/LaTeX)
+- asciidag (the Sphinx extension, NOT https://pypi.org/project/asciidag/, based on
+  TikZ/LaTeX)
 
 - https://opencomputinglab.github.io/SubjectMatterNotebooks/diagram/sphinx-diagrammers.html
 
@@ -52,9 +52,8 @@ on TikZ/LaTeX)
 - https://pypi.org/project/sphinx-diagrams/ (based on Graphviz)
 
 - https://foss.heptapod.net/mercurial/hg-docgraph (based on Graphviz, used in
-[Topic
-tutorial](https://www.mercurial-scm.org/doc/evolution/tutorials/topic-tutorial.html),
-[source](https://foss.heptapod.net/mercurial/evolve/-/blob/branch/default/tests/test-topic-tutorial.t)).
+  [Topic tutorial](https://www.mercurial-scm.org/doc/evolution/tutorials/topic-tutorial.html),
+  [source](https://foss.heptapod.net/mercurial/evolve/-/blob/branch/default/tests/test-topic-tutorial.t)).
 
 - https://github.com/sphinx-contrib/svgbob
 

@@ -33,7 +33,7 @@ rm -rf /tmp/tmp_mercurial_book/*
 ## An overview of hooks in Mercurial
 
 Here is a brief list of the hooks that Mercurial supports. We will revisit each of
-these hooks in more detail later, in {ref}`sec:hook:ref <sec:hook:ref>`.
+these hooks in more detail later, in {ref}`sec-hook-ref`.
 
 Each of the hooks whose description begins with the word “Controlling” has the
 ability to determine whether an activity can proceed. If the hook succeeds, the
@@ -204,7 +204,7 @@ It is a good idea to use a somewhat descriptive extension when you define a new
 hook. This will help you to remember what the hook was for. If the hook fails,
 you'll get an error message that contains the hook name and extension, so using a
 descriptive extension could give you an immediate hint as to why the hook failed
-(see {ref}`sec:hook:perm <sec:hook:perm>` for an example).
+(see {ref}`sec-hook-perm` for an example).
 
 (sec-hook-perm)=
 
@@ -744,11 +744,11 @@ Here is an example set of `bugzilla` hook config information.
 The most common problems with configuring the `bugzilla` hook relate to running
 Bugzilla's `processmail` script and mapping committer names to user names.
 
-Recall from {ref}`sec:hook:bugzilla:config <sec:hook:bugzilla:config>` above that
-the user that runs the Mercurial process on the server is also the one that will
-run the `processmail` script. The `processmail` script sometimes causes Bugzilla
-to write to files in its configuration directory, and Bugzilla's configuration
-files are usually owned by the user that your web server runs under.
+Recall from {ref}`sec-hook-bugzilla-config` above that the user that runs the
+Mercurial process on the server is also the one that will run the `processmail`
+script. The `processmail` script sometimes causes Bugzilla to write to files in
+its configuration directory, and Bugzilla's configuration files are usually owned
+by the user that your web server runs under.
 
 You can cause `processmail` to be run with the suitable user's identity using the
 `sudo` command. Here is an example entry for a `sudoers` file.
@@ -840,8 +840,8 @@ Configuration information for this hook lives in the `notify` section of a
   to 300. Set this to `0` to omit diffs from notification emails.
 - sources: A list of sources of changesets to consider. This lets you limit
   `notify` to only sending out email about changes that remote users pushed into
-  this repository via a server, for example. See
-  {ref}`sec:hook:sources <sec:hook:sources>` for the sources you can specify here.
+  this repository via a server, for example. See {ref}`sec-hook-sources` for the
+  sources you can specify here.
 
 If you set the baseurl item in the `web` section, you can use it in a template; it
 will be available as `webroot`.
@@ -983,15 +983,14 @@ Parameters to this hook:
 - `node`: A changeset ID. The changeset ID of the first changeset in the group
   that was added. All changesets between this and `tip`, inclusive, were added by
   a single `hg pull`, `hg push` or `hg unbundle`.
-- `source`: A string. The source of these changes. See
-  {ref}`sec:hook:sources <sec:hook:sources>` for details.
+- `source`: A string. The source of these changes. See {ref}`sec-hook-sources` for
+  details.
 - `url`: A URL. The location of the remote repository, if known. See
-  {ref}`sec:hook:url <sec:hook:url>` for more information.
+  {ref}`sec-hook-url` for more information.
 
-See also: `incoming` ({ref}`sec:hook:incoming <sec:hook:incoming>`),
-`prechangegroup` ({ref}`sec:hook:prechangegroup <sec:hook:prechangegroup>`),
-`pretxnchangegroup`
-({ref}`sec:hook:pretxnchangegroup <sec:hook:pretxnchangegroup>`)
+See also: `incoming` ({ref}`sec-hook-incoming`), `prechangegroup`
+({ref}`sec-hook-prechangegroup`), `pretxnchangegroup`
+({ref}`sec-hook-pretxnchangegroup`)
 
 (sec-hook-commit)=
 
@@ -1007,8 +1006,8 @@ Parameters to this hook:
 - `parent2`: A changeset ID. The changeset ID of the second parent of the newly
   committed changeset.
 
-See also: `precommit` ({ref}`sec:hook:precommit <sec:hook:precommit>`),
-`pretxncommit` ({ref}`sec:hook:pretxncommit <sec:hook:pretxncommit>`)
+See also: `precommit` ({ref}`sec-hook-precommit`), `pretxncommit`
+({ref}`sec-hook-pretxncommit`)
 
 (sec-hook-incoming)=
 
@@ -1019,22 +1018,20 @@ for example via a `hg push`. If a group of changesets was added in a single
 operation, this hook is called once for each added changeset.
 
 You can use this hook for the same purposes as the `changegroup` hook
-({ref}`sec:hook:changegroup <sec:hook:changegroup>`); it's simply more convenient
-sometimes to run a hook once per group of changesets, while other times it's
-handier once per changeset.
+({ref}`sec-hook-changegroup`); it's simply more convenient sometimes to run a hook
+once per group of changesets, while other times it's handier once per changeset.
 
 Parameters to this hook:
 
 - `node`: A changeset ID. The ID of the newly added changeset.
-- `source`: A string. The source of these changes. See
-  {ref}`sec:hook:sources <sec:hook:sources>` for details.
+- `source`: A string. The source of these changes. See {ref}`sec-hook-sources` for
+  details.
 - `url`: A URL. The location of the remote repository, if known. See
-  {ref}`sec:hook:url <sec:hook:url>` for more information.
+  {ref}`sec-hook-url` for more information.
 
-See also: `changegroup` ({ref}`sec:hook:changegroup <sec:hook:changegroup>`)
-`prechangegroup` ({ref}`sec:hook:prechangegroup <sec:hook:prechangegroup>`),
-`pretxnchangegroup`
-({ref}`sec:hook:pretxnchangegroup <sec:hook:pretxnchangegroup>`)
+See also: `changegroup` ({ref}`sec-hook-changegroup`) `prechangegroup`
+({ref}`sec-hook-prechangegroup`), `pretxnchangegroup`
+({ref}`sec-hook-pretxnchangegroup`)
 
 (sec-hook-outgoing)=
 
@@ -1051,14 +1048,14 @@ Parameters to this hook:
 - `node`: A changeset ID. The changeset ID of the first changeset of the group
   that was sent.
 - `source`: A string. The source of the of the operation (see
-  {ref}`sec:hook:sources <sec:hook:sources>`). If a remote client pulled changes
-  from this repository, `source` will be `serve`. If the client that obtained
-  changes from this repository was local, `source` will be `bundle`, `pull`, or
-  `push`, depending on the operation the client performed.
+  {ref}`sec-hook-sources`). If a remote client pulled changes from this
+  repository, `source` will be `serve`. If the client that obtained changes from
+  this repository was local, `source` will be `bundle`, `pull`, or `push`,
+  depending on the operation the client performed.
 - `url`: A URL. The location of the remote repository, if known. See
-  {ref}`sec:hook:url <sec:hook:url>` for more information.
+  {ref}`sec-hook-url` for more information.
 
-See also: `preoutgoing` ({ref}`sec:hook:preoutgoing <sec:hook:preoutgoing>`)
+See also: `preoutgoing` ({ref}`sec-hook-preoutgoing`)
 
 (sec-hook-prechangegroup)=
 
@@ -1078,14 +1075,14 @@ local administrator to modify the repository.
 
 Parameters to this hook:
 
-- `source`: A string. The source of these changes. See
-  {ref}`sec:hook:sources <sec:hook:sources>` for details.
+- `source`: A string. The source of these changes. See {ref}`sec-hook-sources` for
+  details.
 - `url`: A URL. The location of the remote repository, if known. See
-  {ref}`sec:hook:url <sec:hook:url>` for more information.
+  {ref}`sec-hook-url` for more information.
 
-See also: `changegroup` ({ref}`sec:hook:changegroup <sec:hook:changegroup>`),
-`incoming` ({ref}`sec:hook:incoming <sec:hook:incoming>`), `pretxnchangegroup`
-({ref}`sec:hook:pretxnchangegroup <sec:hook:pretxnchangegroup>`)
+See also: `changegroup` ({ref}`sec-hook-changegroup`), `incoming`
+({ref}`sec-hook-incoming`), `pretxnchangegroup`
+({ref}`sec-hook-pretxnchangegroup`)
 
 (sec-hook-precommit)=
 
@@ -1109,8 +1106,8 @@ Parameters to this hook:
 If the commit proceeds, the parents of the working directory will become the
 parents of the new changeset.
 
-See also: `commit` ({ref}`sec:hook:commit <sec:hook:commit>`), `pretxncommit`
-({ref}`sec:hook:pretxncommit <sec:hook:pretxncommit>`)
+See also: `commit` ({ref}`sec-hook-commit`), `pretxncommit`
+({ref}`sec-hook-pretxncommit`)
 
 (sec-hook-preoutgoing)=
 
@@ -1125,14 +1122,13 @@ repository.
 Parameters to this hook:
 
 - `source`: A string. The source of the operation that is attempting to obtain
-  changes from this repository (see {ref}`sec:hook:sources <sec:hook:sources>`).
-  See the documentation for the `source` parameter to the `outgoing` hook, in
-  {ref}`sec:hook:outgoing <sec:hook:outgoing>`, for possible values of this
-  parameter.
+  changes from this repository (see {ref}`sec-hook-sources`). See the
+  documentation for the `source` parameter to the `outgoing` hook, in
+  {ref}`sec-hook-outgoing`, for possible values of this parameter.
 - `url`: A URL. The location of the remote repository, if known. See
-  {ref}`sec:hook:url <sec:hook:url>` for more information.
+  {ref}`sec-hook-url` for more information.
 
-See also: `outgoing` ({ref}`sec:hook:outgoing <sec:hook:outgoing>`)
+See also: `outgoing` ({ref}`sec-hook-outgoing`)
 
 (sec-hook-pretag)=
 
@@ -1149,10 +1145,10 @@ Parameters to this hook:
 - `tag`: A string. The name of the tag to be created.
 
 If the tag to be created is revision-controlled, the `precommit` and
-`pretxncommit` hooks ({ref}`sec:hook:commit <sec:hook:commit>` and
-{ref}`sec:hook:pretxncommit <sec:hook:pretxncommit>`) will also be run.
+`pretxncommit` hooks ({ref}`sec-hook-commit` and {ref}`sec-hook-pretxncommit`)
+will also be run.
 
-See also: `tag` ({ref}`sec:hook:tag <sec:hook:tag>`)
+See also: `tag` ({ref}`sec-hook-tag`)
 
 (sec-hook-pretxnchangegroup)=
 
@@ -1180,14 +1176,13 @@ Parameters to this hook:
 - `node`: A changeset ID. The changeset ID of the first changeset in the group
   that was added. All changesets between this and `tip`, inclusive, were added by
   a single `hg pull`, `hg push` or `hg unbundle`.
-- `source`: A string. The source of these changes. See
-  {ref}`sec:hook:sources <sec:hook:sources>` for details.
+- `source`: A string. The source of these changes. See {ref}`sec-hook-sources` for
+  details.
 - `url`: A URL. The location of the remote repository, if known. See
-  {ref}`sec:hook:url <sec:hook:url>` for more information.
+  {ref}`sec-hook-url` for more information.
 
-See also: `changegroup` ({ref}`sec:hook:changegroup <sec:hook:changegroup>`),
-`incoming` ({ref}`sec:hook:incoming <sec:hook:incoming>`), `prechangegroup`
-({ref}`sec:hook:prechangegroup <sec:hook:prechangegroup>`)
+See also: `changegroup` ({ref}`sec-hook-changegroup`), `incoming`
+({ref}`sec-hook-incoming`), `prechangegroup` ({ref}`sec-hook-prechangegroup`)
 
 (sec-hook-pretxncommit)=
 
@@ -1214,7 +1209,7 @@ Parameters to this hook:
 - `parent2`: A changeset ID. The changeset ID of the second parent of the newly
   committed changeset.
 
-See also: `precommit` ({ref}`sec:hook:precommit <sec:hook:precommit>`)
+See also: `precommit` ({ref}`sec-hook-precommit`)
 
 (sec-hook-preupdate)=
 
@@ -1233,7 +1228,7 @@ Parameters to this hook:
 - `parent2`: A changeset ID. Only set if the working directory is being merged.
   The ID of the revision that the working directory is being merged with.
 
-See also: `update` ({ref}`sec:hook:update <sec:hook:update>`)
+See also: `update` ({ref}`sec-hook-update`)
 
 (sec-hook-tag)=
 
@@ -1249,9 +1244,9 @@ Parameters to this hook:
 - `tag`: A string. The name of the tag that was created.
 
 If the created tag is revision-controlled, the `commit` hook (section
-{ref}`sec:hook:commit <sec:hook:commit>`) is run before this hook.
+{ref}`sec-hook-commit`) is run before this hook.
 
-See also: `pretag` ({ref}`sec:hook:pretag <sec:hook:pretag>`)
+See also: `pretag` ({ref}`sec-hook-pretag`)
 
 (sec-hook-update)=
 
@@ -1270,4 +1265,4 @@ cleanly.
 - `parent2`: A changeset ID. Only set if the working directory was merged. The ID
   of the revision that the working directory was merged with.
 
-See also: `preupdate` ({ref}`sec:hook:preupdate <sec:hook:preupdate>`)
+See also: `preupdate` ({ref}`sec-hook-preupdate`)

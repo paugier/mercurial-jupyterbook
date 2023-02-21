@@ -46,11 +46,12 @@ A file that is large, or has a lot of history, has its filelog stored in separat
 data (“`.d`” suffix) and index (“`.i`” suffix) files. For small files without much
 history, the revision data and index are combined in a single “`.i`” file. The
 correspondence between a file in the working directory and the filelog that tracks
-its history in the repository is illustrated in {ref}`fig-concepts-filelog`.
-
-(fig-concepts-filelog)=
+its history in the repository is illustrated in {numref}`fig-concepts-filelog`.
 
 ```{figure} ../figs/filelog.svg
+---
+name: fig-concepts-filelog
+---
 Relationships between files in working directory and filelogs in repository
 ```
 
@@ -79,11 +80,12 @@ For every changeset in a repository, there is exactly one revision stored in the
 changelog. Each revision of the changelog contains a pointer to a single revision
 of the manifest. A revision of the manifest stores a pointer to a single revision
 of each filelog tracked when that changeset was created. These relationships are
-illustrated in {ref}`fig-concepts-metadata`.
-
-(fig-concepts-metadata)=
+illustrated in {numref}`fig-concepts-metadata`.
 
 ```{figure} ../figs/metadata.svg
+---
+name: fig-concepts-metadata
+---
 Metadata relationships
 ```
 
@@ -141,9 +143,10 @@ then every one of the revisions between the snapshot and your target revision. T
 more history that a file accumulates, the more revisions you must read, hence the
 longer it takes to reconstruct a particular revision.
 
-(fig-concepts-snapshot)=
-
 ```{figure} ../figs/snapshot.svg
+---
+name: fig-concepts-snapshot
+---
 Snapshot of a revlog, with incremental deltas
 ```
 
@@ -154,9 +157,9 @@ instead of another delta. This makes it possible to reconstruct *any* revision o
 a file quickly. This approach works so well that it has since been copied by
 several other revision control systems.
 
-{ref}`fig-concepts-snapshot` illustrates the idea. In an entry in a revlog's index
-file, Mercurial stores the range of entries from the data file that it must read
-to reconstruct a particular revision.
+{numref}`fig-concepts-snapshot` illustrates the idea. In an entry in a revlog's
+index file, Mercurial stores the range of entries from the data file that it must
+read to reconstruct a particular revision.
 
 ## Aside: the influence of video compression
 
@@ -197,9 +200,9 @@ for not one parent, but two. Mercurial uses a special hash, called the “null I
 to represent the idea “there is no parent here”. This hash is simply a string of
 zeroes.
 
-In {ref}`fig-concepts-revlog`, you can see an example of the conceptual structure
-of a revlog. Filelogs, manifests, and changelogs all have this same structure;
-they differ only in the kind of data stored in each delta or snapshot.
+In {numref}`fig-concepts-revlog`, you can see an example of the conceptual
+structure of a revlog. Filelogs, manifests, and changelogs all have this same
+structure; they differ only in the kind of data stored in each delta or snapshot.
 
 The first revision in a revlog (at the bottom of the image) has the null ID in
 both of its parent slots. For a “normal” revision, its first parent slot contains
@@ -208,9 +211,10 @@ that the revision has only one real parent. Any two revisions that have the same
 parent ID are branches. A revision that represents a merge between branches has
 two normal revision IDs in its parent slots.
 
-(fig-concepts-revlog)=
-
 ```{figure} ../figs/revlog.svg
+---
+name: fig-concepts-revlog
+---
 The conceptual structure of a revlog
 ```
 
@@ -248,19 +252,21 @@ The dirstate stores parent information for more than just book-keeping purposes.
 Mercurial uses the parents of the dirstate as *the parents of a new changeset*
 when you perform a commit.
 
-(fig-concepts-wdir)=
-
 ```{figure} ../figs/wdir.svg
+---
+name: fig-concepts-wdir
+---
 The working directory can have two parents
 ```
 
-{ref}`fig-concepts-wdir` shows the normal state of the working directory, where it
-has a single changeset as parent. That changeset is the *tip*, the newest
+{numref}`fig-concepts-wdir` shows the normal state of the working directory, where
+it has a single changeset as parent. That changeset is the *tip*, the newest
 changeset in the repository that has no children.
 
-(fig-concepts-wdir-after-commit)=
-
 ```{figure} ../figs/wdir-after-commit.svg
+---
+name: fig-concepts-wdir-after-commit
+---
 The working directory gains new parents after a commit
 ```
 
@@ -272,7 +278,7 @@ working directory as its parents.
 
 After a commit, Mercurial will update the parents of the working directory, so
 that the first parent is the ID of the new changeset, and the second is the null
-ID. This is shown in {ref}`fig-concepts-wdir-after-commit`. Mercurial doesn't
+ID. This is shown in {numref}`fig-concepts-wdir-after-commit`. Mercurial doesn't
 touch any of the files in the working directory when you commit; it just modifies
 the dirstate to note its new parents.
 
@@ -285,11 +291,12 @@ introduced a bug. In cases like this, the natural thing to do is update the
 working directory to the changeset you're interested in, and then examine the
 files in the working directory directly to see their contents as they were when
 you committed that changeset. The effect of this is shown in
-{ref}`fig-concepts-wdir-pre-branch`.
-
-(fig-concepts-wdir-pre-branch)=
+{numref}`fig-concepts-wdir-pre-branch`.
 
 ```{figure} ../figs/wdir-pre-branch.svg
+---
+name: fig-concepts-wdir-pre-branch
+---
 The working directory, updated to an older changeset
 ```
 
@@ -299,11 +306,12 @@ outlined above. The parents of the working directory become the parents of the n
 changeset. This new changeset has no children, so it becomes the new tip. And the
 repository now contains two changesets that have no children; we call these
 *heads*. You can see the structure that this creates in
-{ref}`fig-concepts-wdir-branch`.
-
-(fig-concepts-wdir-branch)=
+{numref}`fig-concepts-wdir-branch`.
 
 ```{figure} ../figs/wdir-branch.svg
+---
+name: fig-concepts-wdir-branch
+---
 After a commit made while synced to an older changeset
 ```
 
@@ -322,11 +330,12 @@ I'll discuss other ways to avoid this behavior, and why Mercurial behaves in thi
 
 When you run the `hg merge` command, Mercurial leaves the first parent of the
 working directory unchanged, and sets the second parent to the changeset you're
-merging with, as shown in {ref}`fig-concepts-wdir-merge`.
-
-(fig-concepts-wdir-merge)=
+merging with, as shown in {numref}`fig-concepts-wdir-merge`.
 
 ```{figure} ../figs/wdir-merge.svg
+---
+name: fig-concepts-wdir-merge
+---
 Merging two heads
 ```
 
@@ -430,7 +439,7 @@ ssh = ssh -C
 ### Read/write ordering and atomicity
 
 Appending to files isn't the whole story when it comes to guaranteeing that a
-reader won't see a partial write. If you recall {ref}`fig-concepts-metadata`,
+reader won't see a partial write. If you recall {numref}`fig-concepts-metadata`,
 revisions in the changelog point to revisions in the manifest, and revisions in
 the manifest point to revisions in filelogs. This hierarchy is deliberate.
 
