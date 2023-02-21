@@ -10,7 +10,7 @@ build:
     python: "3.10"
   jobs:
     post_create_environment:
-      - /usr/bin/python -m pip install hg-git
+      - /usr/bin/python3 -m pip install hg-git
       - pip install poetry
       - poetry config virtualenvs.create false
     post_install:
